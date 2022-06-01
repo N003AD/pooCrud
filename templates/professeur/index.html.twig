@@ -17,4 +17,27 @@
         <li>Your template at <code><a href="{{ '/home/cheikh/Bureau/Sonatel/pooCrud/templates/professeur/index.html.twig'|file_link(0) }}">templates/professeur/index.html.twig</a></code></li>
     </ul>
 </div>
+ <table class="table table-hover text-center ">
+    <thead class="table-dark">
+        <tr>
+         <th scope="col1">Nom Complet</th>
+        <th scope="col1">Grade</th>
+            <th>Action1</th>
+            <th>Action2</th>
+        </tr>
+    </thead>
+    <tbody>
+    {% for professeur in professeurs %}
+    <tr>
+        <td>{{professeur.nomComplet}} </td>
+          <td>{{professeur.grade}} </td>
+        <td><button class='btn btn-warning'>Modifier</button></td>
+        <td><button type="submit" class='btn btn-danger'>Supprimer</button></td>
+    </tr>
+    {% endfor %}
+    </table>
+<div class="d-flex justify-content-center">
+    {% do professeurs.setPageRange(10) %}
+    {{knp_pagination_render(professeurs,'base/pagination.html.twig')}}
 {% endblock %}
+

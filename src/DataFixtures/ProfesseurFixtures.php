@@ -39,5 +39,5 @@ class ProfesseurFixtures extends Fixture
         $manager->flush();
     }
 
-   
+
 }
