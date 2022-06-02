@@ -1,6 +1,6 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello DemandeController!{% endblock %}
+{% block title %}Hello ModuleController!{% endblock %}
 
 {% block body %}
 <style>
@@ -13,8 +13,31 @@
 
     This friendly message is coming from:
     <ul>
-        <li>Your controller at <code><a href="{{ '/home/cheikh/Bureau/Sonatel/pooCrud/src/Controller/DemandeController.php'|file_link(0) }}">src/Controller/DemandeController.php</a></code></li>
-        <li>Your template at <code><a href="{{ '/home/cheikh/Bureau/Sonatel/pooCrud/templates/demande/index.html.twig'|file_link(0) }}">templates/demande/index.html.twig</a></code></li>
+        <li>Your controller at <code><a href="{{ '/home/cheikh/Bureau/Sonatel/pooCrud/src/Controller/ProfesseurController.php'|file_link(0) }}">src/Controller/ProfesseurController.php</a></code></li>
+        <li>Your template at <code><a href="{{ '/home/cheikh/Bureau/Sonatel/pooCrud/templates/professeur/index.html.twig'|file_link(0) }}">templates/professeur/index.html.twig</a></code></li>
     </ul>
 </div>
+ <table class="table table-hover text-center ">
+    <thead class="table-dark">
+        <tr>
+            <th scope="col1">Motif</th>
+            <th scope="col1">Etat</th>
+            <th>Action1</th>
+            <th>Action2</th>
+        </tr>
+    </thead>
+    <tbody>
+      {% for demande in demandes %}
+    <tr>
+        <td>{{demande.motif}} </td>
+        <td>{{demande.etat}} </td>
+        <td><button class='btn btn-warning'>Modifier</button></td>
+        <td><button type="submit" class='btn btn-danger'>Supprimer</button></td>
+    </tr>
+    {% endfor %}
+    </table>
+      <div class="d-flex justify-content-center">
+    {% do demandes.setPageRange(10) %}
+    {{knp_pagination_render(demandes,'base/pagination.html.twig')}}
 {% endblock %}
+

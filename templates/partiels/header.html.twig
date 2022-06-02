@@ -1,0 +1,117 @@
+
+<nav class="navbar navbar-expand-md navbar-dark bg-dark mb-4 ">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="<?=$Constantes::WEB_ROOT.''?>"><i class="menu-icon fa fa-laptop"></i> Accueil</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+      <ul class="navbar-nav me-auto mb-2 mb-md-0">
+       
+      <!-- <div class="btn-group">
+  <button type="button" class="btn btn-danger dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+    AC
+  </button>
+  <ul class="dropdown-menu">
+    <li><a class="dropdown-item" href="etudiant">Lister Etudiant</a></li>
+    <li><a class="dropdown-item" href="inscription">Inscrire étudiant</a></li>
+  </ul>
+</div>  -->
+
+
+{# <?php if($role::isAc()): ?> #}
+  <div class="btn-group">
+    <button type="button" class="btn btn-danger dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+      Module
+    </button>
+    <ul class="dropdown-menu">
+      <li><a class="dropdown-item" href="module">Liste Module</a></li>
+      <li><a class="dropdown-item" href="addModule">Ajouter Module</a></li>
+    </ul>
+  </div>
+  <div class="btn-group">
+  
+  <button type="button" class="btn btn-danger dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+    Etudiant
+  </button>
+  <ul class="dropdown-menu">
+    <li><a class="dropdown-item" href="etudiant">Lister Etudiant</a></li>
+    <li><a class="dropdown-item" href="inscription">Inscrire étudiant</a></li>
+  </ul>
+</div>
+{# <?php endif; ?>
+
+<?php if($role::isRP()): ?> #}
+  <div class="btn-group">
+  <button type="button" class="btn btn-danger dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+    Professeur
+  </button>
+  <ul class="dropdown-menu">
+    <li><a class="dropdown-item" href="lp">Lister Professeur</a></li>
+    <li><a class="dropdown-item" href="addProf">Ajouter Professeur</a></li>
+  </ul>
+</div>
+
+<div class="btn-group">
+  <button type="button" class="btn btn-danger dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+    Classe
+  </button>
+  <ul class="dropdown-menu">
+    <li><a class="dropdown-item" href="classe">Lister Classe</a></li>
+    <li><a class="dropdown-item" href="addClasse">Ajouter Classe</a></li>
+    <li><a class="dropdown-item" href="addClasse">Affecter Classe à un professeur</a></li>
+  </ul>
+</div>
+{# <?php endif; ?> #}
+
+<!-- <div class="btn-group">
+  <button type="button" class="btn btn-danger dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+    RP
+  </button>
+  <ul class="dropdown-menu">
+    <li><a class="dropdown-item" href="lp">Lister RP</a></li>
+  </ul>
+</div> -->
+{# <?php if($role::isRP() || $role::isEtudinat() ): ?> #}
+  <div class="btn-group">
+  <button type="button" class="btn btn-danger dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+    Demande
+  </button>
+  <ul class="dropdown-menu">
+    <li><a class="dropdown-item" href="demande">Lister  Demande</a></li>
+    <li><a class="dropdown-item" href="addDemande">Créer  Demande</a></li>
+  </ul>
+</div>
+{# <?php endif; ?> #}
+
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="login">Se Connecter</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="logout">Se Deconnecter</a>
+        </li>
+      </ul>
+      <form class="d-flex">
+        <!-- <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"> -->
+        <button class="btn btn-outline-success" id="butad" type="button" ><a href="<?=$Constantes::WEB_ROOT.''?>" style="text-decoration:none">Add+</a></button>
+      </form>
+    </div>
+  </div>
+</nav>
+
+<!-- <nav aria-label="...">
+  <ul class="pagination">
+    <li class="page-item disabled">
+      <a class="page-link">Previous</a>
+    </li>
+    <li class="page-item"><a class="page-link" href="#">1</a></li>
+    <li class="page-item active" aria-current="page">
+      <a class="page-link" href="#">2</a>
+    </li>
+    <li class="page-item"><a class="page-link" href="#">3</a></li>
+    <li class="page-item">
+      <a class="page-link" href="#">Next</a>
+    </li>
+  </ul>
+</nav>
+<input type="hidden" name="currentpage" id="currentpage" value="1"> -->

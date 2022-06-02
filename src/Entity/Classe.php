@@ -27,6 +27,9 @@ class Classe
     #[ORM\ManyToMany(targetEntity: Professeur::class, mappedBy: 'classes')]
     private $professeurs;
 
+    #[ORM\ManyToOne(targetEntity: RP::class, inversedBy: 'classes')]
+    private $rP;
+
     public function __construct()
     {
         $this->professeurs = new ArrayCollection();
@@ -96,6 +99,18 @@ class Classe
         if ($this->professeurs->removeElement($professeur)) {
             $professeur->removeClass($this);
         }
+
+        return $this;
+    }
+
+    public function getRP(): ?RP
+    {
+        return $this->rP;
+    }
+
+    public function setRP(?RP $rP): self
+    {
+        $this->rP = $rP;
 
         return $this;
     }

@@ -8,7 +8,7 @@ use Symfony\Component\Security\Core\User\PasswordAuthenticatedUserInterface;
 use Symfony\Component\Security\Core\User\UserInterface;
 
 #[ORM\Entity(repositoryClass: UserRepository::class)]
-class User implements UserInterface, PasswordAuthenticatedUserInterface
+class User extends Personne implements UserInterface, PasswordAuthenticatedUserInterface
 {
 
     #[ORM\Column(type: 'string', length: 180, unique: true)]

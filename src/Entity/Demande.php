@@ -19,6 +19,12 @@ class Demande
     #[ORM\Column(type: 'string', length: 255)]
     private $etat;
 
+    #[ORM\ManyToOne(targetEntity: Inscription::class, inversedBy: 'demandes')]
+    private $inscription;
+
+    #[ORM\ManyToOne(targetEntity: RP::class, inversedBy: 'demandes')]
+    private $rP;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -44,6 +50,30 @@ class Demande
     public function setEtat(string $etat): self
     {
         $this->etat = $etat;
+
+        return $this;
+    }
+
+    public function getInscription(): ?Inscription
+    {
+        return $this->inscription;
+    }
+
+    public function setInscription(?Inscription $inscription): self
+    {
+        $this->inscription = $inscription;
+
+        return $this;
+    }
+
+    public function getRP(): ?RP
+    {
+        return $this->rP;
+    }
+
+    public function setRP(?RP $rP): self
+    {
+        $this->rP = $rP;
 
         return $this;
     }
