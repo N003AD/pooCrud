@@ -14,7 +14,9 @@ class ModuleType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options): void
     {
         $builder
-            ->add('libelle',TextType::class, [
+        ->add('libelle')
+
+        ->add('libelle',TextType::class, [
                 "label" => "Entrer une classe",
                 'attr' => [
                     'placeholder' =>  'libelle',

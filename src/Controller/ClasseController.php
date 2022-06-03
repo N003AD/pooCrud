@@ -44,13 +44,12 @@ class ClasseController extends AbstractController
             $classeform->handleRequest($request);
 
             if($classeform->isSubmitted() && $classeform->isValid()){
-                $classe = $classeform->getData();
-                // dd($classeform->getData());
+                $manager->persist($classe);
+                $manager->flush();
                 $this->addFlash(
                     'sucess',
                     'Vous avez ajouté une classe',
                 );
-                $manager->flush();
                 return $this->redirectToRoute('app_classe');
             }
 

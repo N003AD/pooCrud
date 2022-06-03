@@ -35,7 +35,7 @@ class ModuleController extends AbstractController
         ]);
     }
 
-    #[Route('/addModule', name: 'app_create', methods:['GET', 'POST'])]
+    #[Route('/addModule', name: 'app_cte', methods:['GET', 'POST'])]
     public function addClasse(Request $request, EntityManagerInterface $manager): Response{
         $module= new Module();
         $moduleform = $this->createForm(ModuleType::class, $module);
