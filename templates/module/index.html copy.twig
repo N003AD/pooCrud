@@ -17,28 +17,25 @@
         <li>Your template at <code><a href="{{ '/home/cheikh/Bureau/Sonatel/pooCrud/templates/professeur/index.html.twig'|file_link(0) }}">templates/professeur/index.html.twig</a></code></li>
     </ul>
 </div>
-<table class="table table-hover text-center ">
+ <table class="table table-hover text-center ">
     <thead class="table-dark">
         <tr>
             <th scope="col1">Libelle</th>
-            <th scope="col1">Filiere</th>
-            <th scope="col1" >Niveau</th>
             <th>Action1</th>
             <th>Action2</th>
         </tr>
     </thead>
     <tbody>
-      {% for classe in classes %}
-            <tr>
-                <td>{{classe.niveau}} </td>
-                <td>{{classe.filiere}} </td>
-                <td>{{classe.libelle}} </td>
-                <td><button class='btn btn-warning'>Modifier</button></td>
-                <td><button type="submit" class='btn btn-danger'>Supprimer</button></td>
-            </tr>
-       {% endfor %}
-</table>
-    <class="d-flex justify-content-center">
-    {% do classes.setPageRange(10) %}
-    {{knp_pagination_render(classes,'base/pagination.html.twig')}}
+      {% for module in modules %}
+    <tr>
+        <td>{{module.libelle}} </td>
+        <td><button class='btn btn-warning'>Modifier</button></td>
+        <td><button type="submit" class='btn btn-danger'>Supprimer</button></td>
+    </tr>
+    {% endfor %}
+    </table>
+      <div class="d-flex justify-content-center">
+    {% do modules.setPageRange(10) %}
+    {{knp_pagination_render(modules,'base/pagination.html.twig')}}
 {% endblock %}
+
