@@ -37,7 +37,7 @@ class ClasseController extends AbstractController
 
 
         #[Route('/classe/new', name: 'app_addClasse', methods:['GET', 'POST'])]
-      
+
         public function addClasse(Request $request, EntityManagerInterface $manager): Response{
             $classe= new Classe();
             $classeform = $this->createForm(ClasseType::class,$classe);
@@ -50,8 +50,6 @@ class ClasseController extends AbstractController
                     'sucess',
                     'Vous avez ajouté une classe',
                 );
-
-                $manager->persist($classe);
                 $manager->flush();
                 return $this->redirectToRoute('app_classe');
             }

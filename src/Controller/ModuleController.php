@@ -3,6 +3,7 @@
 namespace App\Controller;
 
 use App\Entity\Module;
+use App\Form\ModuleType;
 use App\Repository\ModuleRepository;
 use Doctrine\ORM\EntityManagerInterface;
 use Knp\Component\Pager\PaginatorInterface;
@@ -34,10 +35,10 @@ class ModuleController extends AbstractController
         ]);
     }
 
-    #[Route('/addnew', name: 'app_create', methods:['GET', 'POST'])]
+    #[Route('/addModule', name: 'app_create', methods:['GET', 'POST'])]
     public function addClasse(Request $request, EntityManagerInterface $manager): Response{
         $module= new Module();
-        $moduleform = $this->createForm(ClasseType::class,$module);
+        $moduleform = $this->createForm(ModuleType::class, $module);
         $moduleform->handleRequest($request);
 
         if($moduleform->isSubmitted() &&  $moduleform->isValid()){
@@ -50,7 +51,7 @@ class ModuleController extends AbstractController
 
             $manager->persist($module);
             $manager->flush();
-            return $this->redirectToRoute('classe');
+            return $this->redirectToRoute('app_module');
         }
 
         return $this->render('classe/add.html.twig', [
