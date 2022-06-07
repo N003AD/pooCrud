@@ -8,6 +8,7 @@ use App\Repository\ClasseRepository;
 use COM;
 use Doctrine\ORM\EntityManagerInterface;
 use Knp\Component\Pager\PaginatorInterface;
+use phpDocumentor\Reflection\Types\Null_;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpFoundation\Request;
@@ -34,22 +35,21 @@ class ClasseController extends AbstractController
             'classes'=>$classes
         ]);
     }
-
+ 
 
         #[Route('/classe/new', name: 'app_addClasse', methods:['GET', 'POST'])]
-
-        public function addClasse(Request $request, EntityManagerInterface $manager): Response{
-            $classe= new Classe();
+        #[Route('/edit/{id}', name:'classe_edit' , methods:['GET','POST'])]
+        public function addClasse(Request $request, Classe $classe=null, EntityManagerInterface $manager): Response{
+            if(!$classe){
+                $classe= new Classe();
+            }
             $classeform = $this->createForm(ClasseType::class,$classe);
             $classeform->handleRequest($request);
 
             if($classeform->isSubmitted() && $classeform->isValid()){
                 $manager->persist($classe);
                 $manager->flush();
-                $this->addFlash(
-                    'sucess',
-                    'Vous avez ajouté une classe',
-                );
+                $this->addFlash('success', 'Vous a avez crée une classe avec succés');
                 return $this->redirectToRoute('app_classe');
             }
 
@@ -57,5 +57,24 @@ class ClasseController extends AbstractController
                 'classeform' => $classeform->createView(),
                 "controller_name" => "Ajouter une nouvelle classe"
             ]);
+            
         }
+        #[Route('/delete/{id}', name:'classe_delete' , methods:['GET','POST'])]
+
+        public function delete(Classe $classe = null, ClasseRepository $repo){
+            if($classe){
+                $repo->remove($classe, true);
+            }
+            return $this->redirectToRoute('app_classe');
+        }
+    
+        // public function edit(ClasseRepository $repo, $id):Response{
+           
+        //     $classeform=$repo->findOneBy(["id" => $id]);
+           
+        //     $classeform=$this->createForm(ClasseType::class, $classeform);
+        // return $this->render('classe/edit.html.twig', [
+        //     'classeform' => $classeform->createVIew()
+        // ]);
+        // }
 }

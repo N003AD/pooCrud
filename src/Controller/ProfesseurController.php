@@ -45,16 +45,14 @@ class ProfesseurController extends AbstractController
 
             $repo->add($professeurform->getData(),true);
             // dd($professeur);
-            // $this->addFlash(
-            //     'sucess',
-            //     'Vous avez ajouté une classe',
-            // );
-            return $this->redirectToRoute('app_module');
+            $this->addFlash('success', 'Vous a avez crée un professeur avec succés');
+            return $this->redirectToRoute('app_professeur');
         }
 
         return $this->render('classe/add.html.twig', [
             'classeform' => $professeurform ->createView(),
-            "controller_name" => "Ajouter une nouvelle Module"
+            "controller_name" => "Ajouter une nouvelle Professeur"
         ]);
     }
 }
+

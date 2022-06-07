@@ -6,6 +6,7 @@ use App\Repository\ClasseRepository;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
 
 #[ORM\Entity(repositoryClass: ClasseRepository::class)]
 class Classe
@@ -18,6 +19,9 @@ class Classe
     #[ORM\Column(type: 'string', length: 255)]
     private $libelle;
 
+    // #[Assert\NotBlank(message:'Ce cheamp est obligatoire')]
+    
+
     #[ORM\Column(type: 'string', length: 255)]
     private $filiere;
 
@@ -29,6 +33,10 @@ class Classe
 
     #[ORM\ManyToOne(targetEntity: RP::class, inversedBy: 'classes')]
     private $rP;
+
+    public static $niveaux=['L1'=>'L1', 'L2'=>'L2'];
+
+
 
     public function __construct()
     {

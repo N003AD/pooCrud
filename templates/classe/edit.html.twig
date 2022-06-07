@@ -1,0 +1,41 @@
+{% extends "base.html.twig" %}
+{% block body %}
+<div class="container">
+    <h2 class="mt-4">Création d'une classe</h2>
+{# 
+        {% for message in app.flashes('success') %}
+            <div class="alert-success mt-4">
+                {{ message }}
+            </div>
+        {% endfor %} #}
+    {# {{ form(form) }} #}
+
+    {{ form_start(classeform) }}
+        <div class="form-group">
+            {{ form_label(classeform.libelle) }}
+            {{ form_widget(classeform.libelle) }}
+            <div class="form-error">
+                {{ form_errors(classeform.libelle) }} 
+            </div>
+        </div>
+         <div class="form-group">
+            {{ form_label(classeform.filiere) }}
+            {{ form_widget(classeform.filiere) }}
+            <div class="form-error">
+                {{ form_errors(classeform.filiere) }} 
+            </div>
+        </div>
+         <div class="form-group">
+            {{ form_label(classeform.niveau) }}
+            {{ form_widget(classeform.niveau) }}
+            <div class="form-error">
+                {{ form_errors(classeform.niveau) }} 
+            </div>
+        </div>
+        <div class="form-group">
+            {{ form_row(classeform.submit) }}
+        </div>
+    </div>
+{{ form_end(form) }}
+</div>
+{% endblock %}

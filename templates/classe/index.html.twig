@@ -1,44 +1,52 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello ModuleController!{% endblock %}
+{% block title %}Liste de classes{% endblock %}
 
 {% block body %}
-<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
+         <div class="container mt-4">
+         <h1>Les classes</h1>
+            <a href="{{ path('app_addClasse') }}" class="btn btn-primary">
+                    Créer une clases
+            </a>
 
-<div class="example-wrapper">
-    <h1>Hello {{ controller_name }}! ✅</h1>
-
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code><a href="{{ '/home/cheikh/Bureau/Sonatel/pooCrud/src/Controller/ProfesseurController.php'|file_link(0) }}">src/Controller/ProfesseurController.php</a></code></li>
-        <li>Your template at <code><a href="{{ '/home/cheikh/Bureau/Sonatel/pooCrud/templates/professeur/index.html.twig'|file_link(0) }}">templates/professeur/index.html.twig</a></code></li>
-    </ul>
-</div>
-<table class="table table-hover text-center ">
-    <thead class="table-dark">
-        <tr>
-            <th scope="col1">Libelle</th>
-            <th scope="col1">Filiere</th>
-            <th scope="col1" >Niveau</th>
-            <th>Action1</th>
-            <th>Action2</th>
-        </tr>
-    </thead>
-    <tbody>
-      {% for classe in classes %}
+            {% for message in app.flashes('success') %}
+                <div class="alert-success mt-5">
+                    {{ message }}
+                </div>
+            {% endfor %}
+ 
+            {# total items count #}
+            <div class="count mt-4">
+             <h4>
+                Il y a   {{ classes.getTotalItemCount }} classes  au total dans l'école
+             </h4>
+            </div>
+    <table class="table table-hover text-center">
+         <thead class="table-dark">
             <tr>
-                <td>{{classe.niveau}} </td>
-                <td>{{classe.filiere}} </td>
-                <td>{{classe.libelle}} </td>
-                <td><button class='btn btn-warning'>Modifier</button></td>
-                <td><button type="submit" class='btn btn-danger'>Supprimer</button></td>
+            <th scope="col">Id</th>
+            <th scope="col">Libelle</th>
+            <th scope="col">Filiere</th>
+            <th scope="col" >Niveau</th>
+            <th scope="col">Action1</th>
+            <th scope="col">Action2</th>
             </tr>
-       {% endfor %}
-</table>
-    <class="d-flex justify-content-center">
-    {% do classes.setPageRange(10) %}
-    {{knp_pagination_render(classes,'base/pagination.html.twig')}}
+        </thead>
+            <tbody>
+                    {% for classe in classes %}
+                        <tr class="table-primary">
+                         <th scope="row">{{ classe.id }}</th>
+                            <th scope="row">{{ classe.niveau }}</th>
+                            <th scope="row">{{ classe.filiere }}</th>
+                             <th scope="row">{{ classe.libelle }}</th>
+        <td><a href="{{path('classe_edit',{id:classe.id}) }}"><button class='btn btn-warning'>Modifier</button></a></td>
+        <td><a href="{{ path('classe_delete',{id:classe.id}) }}"<button type="submit" class='btn btn-danger'>Supprimer</button></td>
+                        </tr>  
+                    {% endfor %} 
+            </tbody>    
+    </table>
+  # pagination #
+    <div class="navigation d-flex justify-content-center mt-4">
+        {{ knp_pagination_render(classes) }}
+    </div>
 {% endblock %}
