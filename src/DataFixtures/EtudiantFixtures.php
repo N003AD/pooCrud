@@ -3,8 +3,9 @@
 namespace App\DataFixtures;
 
 use App\Entity\Etudiant;
-use Doctrine\Persistence\ObjectManager;
+use App\Entity\User;
 use Doctrine\Bundle\FixturesBundle\Fixture;
+use Doctrine\Persistence\ObjectManager;
 
 class EtudiantFixtures extends Fixture
 {
@@ -12,21 +13,27 @@ class EtudiantFixtures extends Fixture
     {
         // $product = new Product();
         // $manager->persist($product);
-        $matricules=['NOO','DM90','MW56'];
+        $nomComplet=['cheikh Tidiane','Mamadou','Fatyraza'];
+        $matricules=['NOO','N00','NOO'];
         $sexes=['M','F','M'];
-        $addrsses=['Thies','Fass','Dakar'];
+        $email=['diop@gmial.com','Fall@gmial.com','Mbaye@gmial.com'];
+        $password=['diop','Fall','Mbaye'];
+        $addresses=['Thies','Fass','Dakar'];
         for ($i=0; $i <10 ; $i++) { 
             # code...
             $etudiant= new Etudiant;
             $rand=rand(0,2);
-            $etudiant->setMatricule($matricules[$rand])
-                   ->setSexe($sexes[$rand])
-                   ->setAdresse($addrsses[$rand]);
+            $etudiant ->setNomComplet($nomComplet[$rand])
+                      ->setEmail("admin".$i."@gmail.com")
+                      ->setPassword("passer")
+                     ->setRoles(["ROLE_ETUDIANT"])
+                     ->setMatricule($matricules[$rand])
+                    ->setSexe($sexes[$rand])
+                   ->setAdresse($addresses[$rand]);
             $manager->persist($etudiant);
             $this->addReference('etudiant'.$i,$etudiant);
-
-            
-        }
-        $manager->flush();
     }
+    $manager->flush();
+
+}
 }

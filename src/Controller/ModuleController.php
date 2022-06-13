@@ -43,8 +43,11 @@ class ModuleController extends AbstractController
      */
 
     #[Route('/addModule', name: 'ajout_module', methods:['GET', 'POST'])]
-    public function addClasse(Request $request, EntityManagerInterface $manager): Response{
-        $module= new Module();
+    #[Route('/edit/{id}', name:'module_edit' , methods:['GET','POST'])]
+    public function addModule(Request $request, Module $module = null , EntityManagerInterface $manager): Response{
+        if(!$module){
+            $module= new Module();
+        }
         $moduleform = $this->createForm(ModuleType::class, $module);
         $moduleform->handleRequest($request);
 
@@ -63,4 +66,14 @@ class ModuleController extends AbstractController
             "controller_name" => "Ajouter une nouvelle Module"
         ]);
     }
+
+    #[Route('/delete/{id}', name:'module_delete' , methods:['GET','POST'])]
+
+    public function delete(Module $module = null, ModuleRepository $repo){
+        if($module){
+            $repo->remove($module, true);
+        }
+        return $this->redirectToRoute('app_module');
+    }
+
 }

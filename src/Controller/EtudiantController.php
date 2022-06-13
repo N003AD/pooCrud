@@ -18,17 +18,17 @@ class EtudiantController extends AbstractController
         PaginatorInterface $paginator,
         Request $request
     ): Response{
-        $data=$etudiants=$repo->findAll();
+        $data=$repo->findAll();
         $etudiants=$paginator->paginate(
             $data,
             $request->query->getInt('page',1),
             10
         );
-        // $etudiants = new Etudiant;
-        // dd($etudiants);
+        //
+    //  dd($data[0]);
         return $this->render('etudiant/index.html.twig', [
             'controller_name' => 'EtudiantController',
-            'etudiants'=>$etudiants
+            'etudiants'=>$data
         ]);
     }
 }

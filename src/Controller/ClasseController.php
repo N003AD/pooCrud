@@ -35,7 +35,7 @@ class ClasseController extends AbstractController
             'classes'=>$classes
         ]);
     }
- 
+
 
         #[Route('/classe/new', name: 'app_addClasse', methods:['GET', 'POST'])]
         #[Route('/edit/{id}', name:'classe_edit' , methods:['GET','POST'])]

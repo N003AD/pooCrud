@@ -3,891 +3,734 @@
 {% block title %}Hello AcceuilController!{% endblock %}
 
 {% block body %}
+{# 
 
-
-<body>
-
-    <div class="wrapper">
-        <div class="left-side">
-            <div class="logo">
-                <img src="img/logo.png" alt="" />
-            </div>
-            <div class="left-content">
-                <ul role="tablist">
-                    <li role="presentation" class="active"><a href="#one" aria-controls="home" role="tab" data-toggle="tab"><span><i class="fa fa-home"></i></span>Welcome</a></li>
-                    <li role="presentation"><a href="#two" aria-controls="home" role="tab" data-toggle="tab"><span><i class="fa fa-folder"></i></span>Main File Structure</a></li>
-                    <li role="presentation"><a href="#three" aria-controls="home" role="tab" data-toggle="tab"><span><i class="fa fa-code"></i></span>HTML Structure</a></li>
-                    <li role="presentation"><a href="#six" aria-controls="home" role="tab" data-toggle="tab"><span><i class="fa fa-slideshare"></i></span>Plugins stractures</a></li>
-                    <li role="presentation"><a href="#source" aria-controls="home" role="tab" data-toggle="tab"><span><i class="fa fa-thumbs-up"></i></span>Sources & Credits</a></li>
-                    <li role="presentation"><a href="#support" aria-controls="home" role="tab" data-toggle="tab"><span><i class="fa fa-support"></i></span>Support</a></li>
-                </ul>
-            </div>
-            <div class="copyright">
-                <p>Copyright &#169; 2018 <a href="https://colorlib.com/wp/forums/" >SRThemes</a></p>
-            </div>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Bootstrap Dashboard by Bootstrapious.com</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="all,follow">
+    <!-- Google fonts - Roboto -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700">
+    <!-- Choices CSS-->
+    <link rel="stylesheet" href="vendor/choices.js/public/assets/styles/choices.min.css">
+    <!-- Custom Scrollbar-->
+    <link rel="stylesheet" href="vendor/overlayscrollbars/css/OverlayScrollbars.min.css">
+    <!-- theme stylesheet-->
+    <link rel="stylesheet" href="css/style.default.css" id="theme-stylesheet">
+    <!-- Custom stylesheet - for your changes-->
+    <link rel="stylesheet" href="css/custom.css">
+    <!-- Favicon-->
+    <link rel="shortcut icon" href="img/favicon.ico">
+    <!-- Tweaks for older IEs--><!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+  </head>
+  <body>
+    <!-- Side Navbar -->
+    <nav class="side-navbar">
+      <!-- Sidebar Header    -->
+      <div class="sidebar-header d-flex align-items-center justify-content-center p-3 mb-3">
+        <!-- User Info-->
+        <div class="sidenav-header-inner text-center"><img class="img-fluid rounded-circle avatar mb-3" src="img/avatar-7.jpg" alt="person">
+          <h2 class="h5 text-white text-uppercase mb-0">Nathan Andrews</h2>
+          <p class="text-sm mb-0 text-muted">Web Developer</p>
         </div>
-        <div class="right-side">
-            <div class="right-content">
-                <div id="one" class="content active fade in">
-                    <h1><span>Octopus</span> - Octopus Admin Template</h1>
-                    <div class="content-welcome">
-                        <p>
-                            
-                        </p>
-                    </div>
-                    <div class="created">
-                        <p>
-                            Created: 04/11/2018
-                            <br> Latest Update: 04/11/2018
-                            <br> By: Colorlib
-                            
-                            
-                            <br>
-                            <br> Thank you for purchasing our theme. If you have any question, please feel free to contact us from <a href="https://colorlib.com/wp/forums/">here</a>.
-                        </p>
-                    </div>
-                </div>
-                <div id="two" class="content fade">
-                    <h1>Main File Structure</h1>
-                    <p>
-                        All the file are well organized, its so easy to work with.
-                        <br> 1. Unzip the files.
-                        <br> 2. Open "Octopus" folder.
-                        <br> You will find the html markup file on the root that will be edited.
-                        <br> Also you will see 4 directories, css, js, fonts and images.
-                        <br> In the first folder Content only styling files the all the other files expect the htmls.
-                        <br> Js folder contain only the jquery library. Fonts folder contain essetial font files for fonts.
-                    </p>
-                    <pre>
-								<div class="tree-viewer-pd" id="jstree1">
-                                    <ul>
-                                        <li class="jstree-open">Octopus
-                                            <ul>
-                                                <li>css
-                                                    <ul>
-														<li>chosen
-															<ul>
-																<li data-jstree='"type":"css"}'>bootstrap-chosen.css</li>
-															</ul>
-														</li>
-														<li>code-editor
-															<ul>
-																<li data-jstree='"type":"css"}'>ambiance.css</li>
-																<li data-jstree='"type":"css"}'>codemirror.css</li>
-															</ul>
-														</li>
-														<li>colorpicker
-															<ul>
-																<li data-jstree='"type":"css"}'>colorpicker.css</li>
-															</ul>
-														</li>
-														<li>cropper
-															<ul>
-																<li data-jstree='"type":"css"}'>cropper.min.css</li>
-															</ul>
-														</li>
-														<li>datapicker
-															<ul>
-																<li data-jstree='"type":"css"}'>datepicker3.css</li>
-															</ul>
-														</li>
-														<li>data-table
-															<ul>
-																<li data-jstree='"type":"css"}'>bootstrap-editable.css</li>
-																<li data-jstree='"type":"css"}'>bootstrap-table.css</li>
-															</ul>
-														</li>
-														<li>duallistbox
-															<ul>
-																<li data-jstree='"type":"css"}'>bootstrap-duallistbox.min.css</li>
-															</ul>
-														</li>
-														<li>form
-															<ul>
-																<li data-jstree='"type":"css"}'>all-type-forms.css</li>
-																<li data-jstree='"type":"css"}'>themesaller-forms.css</li>
-															</ul>
-														</li>
-														<li>ionRangeSlider
-															<ul>
-																<li data-jstree='"type":"css"}'>ion.rangeSlider.css</li>
-																<li data-jstree='"type":"css"}'>ion.rangeSlider.skinFlat.css</li>
-															</ul>
-														</li>
-														<li>jvectormap
-															<ul>
-																<li data-jstree='"type":"css"}'>jquery-jvectormap-2.0.3.css</li>
-															</ul>
-														</li>
-														<li>preloader
-															<ul>
-																<li data-jstree='"type":"css"}'>preloader-style.css</li>
-															</ul>
-														</li>
-														<li>select2
-															<ul>
-																<li data-jstree='"type":"css"}'>select2.min.css</li>
-															</ul>
-														</li>
-														<li>switcher
-															<ul>
-																<li data-jstree='"type":"css"}'>color-one.css</li>
-																<li data-jstree='"type":"css"}'>color-two.css</li>
-																<li data-jstree='"type":"css"}'>color-three.css</li>
-																<li data-jstree='"type":"css"}'>color-four.css</li>
-																<li data-jstree='"type":"css"}'>color-five.css</li>
-																<li data-jstree='"type":"css"}'>color-six.css</li>
-																<li data-jstree='"type":"css"}'>color-seven.css</li>
-																<li data-jstree='"type":"css"}'>color-eight.css</li>
-																<li data-jstree='"type":"css"}'>color-nine.css</li>
-																<li data-jstree='"type":"css"}'>color-ten.css</li>
-															</ul>
-														</li>
-														<li>touchspin
-															<ul>
-																<li data-jstree='"type":"css"}'>jquery.bootstrap-touchspin.min.css</li>
-															</ul>
-														</li>
-														<li>tree-viewer
-															<ul>
-																<li data-jstree='"type":"css"}'>jtree-viewer.css</li>
-															</ul>
-														</li>
-                                                        <li data-jstree='"type":"css"}'>accordions.css</li>
-                                                        <li data-jstree='"type":"css"}'>adminpro-custon-icon.css</li>
-                                                        <li data-jstree='"type":"css"}'>alerts.css</li>
-                                                        <li data-jstree='"type":"css"}'>animate.css</li>
-                                                        <li data-jstree='"type":"css"}'>bootstrap-editable.css</li>
-                                                        <li data-jstree='"type":"css"}'>buttons.css</li>
-                                                        <li data-jstree='"type":"css"}'>c3.min.css</li>
-                                                        <li data-jstree='"type":"css"}'>charts.css</li>
-                                                        <li data-jstree='"type":"css"}'>datetimepicker.css</li>
-                                                        <li data-jstree='"type":"css"}'>dropzone.css</li>
-                                                        <li data-jstree='"type":"css"}'>form.css</li>
-                                                        <li data-jstree='"type":"css"}'>jquery.mCustomScrollbar.min.css</li>
-                                                        <li data-jstree='"type":"css"}'>Lobibox.min.css</li>
-                                                        <li data-jstree='"type":"css"}'>meanmenu.min.css</li>
-                                                        <li data-jstree='"type":"css"}'>modals.css</li>
-                                                        <li data-jstree='"type":"css"}'>normalize.css</li>
-                                                        <li data-jstree='"type":"css"}'>notifications.css</li>
-                                                        <li data-jstree='"type":"css"}'>select2.css</li>
-                                                        <li data-jstree='"type":"css"}'>select2-bootstrap.css</li>
-                                                        <li data-jstree='"type":"css"}'>summernote.css</li>
-                                                        <li data-jstree='"type":"css"}'>tab-menus.css</li>
-                                                        <li data-jstree='"type":"css"}'>tabs.css</li>
-                                                        <li data-jstree='"type":"css"}'>typeahead.js-bootstrap.css</li>
-                                                        <li data-jstree='"type":"css"}'>x-editor-style.css</li>
-                                                        <li data-jstree='"type":"css"}'>bootstrap.min.css</li>
-                                                        <li data-jstree='"type":"css"}'>font-awesome.min.css</li>
-                                                        <li data-jstree='"type":"css"}'>responsive.css</li>
-                                                        <li data-jstree='"type":"css"}'>tree-viewer.css</li>
-                                                        <li data-jstree='"type":"css"}'>main.css</li>
-                                                    </ul>
-                                                </li>
-												<li>fonts
-                                                    <ul>
-                                                        <li data-jstree='"type":"otf"}'>FontAwesome.otf</li>
-                                                        <li data-jstree='"type":"ttf"}'>fontawesome-webfont.ttf</li>
-                                                        <li data-jstree='"type":"woff"}'>fontawesome-webfont.woff</li>
-                                                        <li data-jstree='"type":"woff"}'>glyphicons-halflings-regular.woff</li>
-                                                    </ul>
-                                                </li>
-												<li class="jstree-open">img
-                                                    <ul>
-                                                        <li>blog-details
-															<ul>
-																<li data-jstree='"type":"png"}'>1.jpg</li>
-															</ul>
-														</li>
-                                                        <li>contact
-															<ul>
-																<li data-jstree='"type":"png"}'>1.jpg</li>
-																<li data-jstree='"type":"png"}'>2.jpg</li>
-																<li data-jstree='"type":"png"}'>3.jpg</li>
-																<li data-jstree='"type":"png"}'>4.jpg</li>
-															</ul>
-														</li>
-                                                        <li>logo
-															<ul>
-																<li data-jstree='"type":"png"}'>logo.png</li>
-															</ul>
-														</li>
-                                                        <li>cropper
-															<ul>
-																<li data-jstree='"type":"jpg"}'>1.jpg</li>
-															</ul>
-														</li>
-                                                        <li>product
-															<ul>
-																<li data-jstree='"type":"jpg"}'>1.jpg</li>
-																<li data-jstree='"type":"jpg"}'>1-big.jpg</li>
-																<li data-jstree='"type":"jpg"}'>1-small.jpg</li>
-																<li data-jstree='"type":"jpg"}'>2.jpg</li>
-																<li data-jstree='"type":"jpg"}'>2-big.jpg</li>
-																<li data-jstree='"type":"jpg"}'>2-small.jpg</li>
-																<li data-jstree='"type":"jpg"}'>3.jpg</li>
-																<li data-jstree='"type":"jpg"}'>3-big.jpg</li>
-																<li data-jstree='"type":"jpg"}'>3-small.jpg</li>
-																<li data-jstree='"type":"jpg"}'>4.jpg</li>
-																<li data-jstree='"type":"jpg"}'>4-big.jpg</li>
-																<li data-jstree='"type":"jpg"}'>4-small.jpg</li>
-																<li data-jstree='"type":"jpg"}'>11-300x300.jpg</li>
-																<li data-jstree='"type":"jpg"}'>p8-375x375.jpg</li>
-																<li data-jstree='"type":"jpg"}'>product072-1-600x600.jpg</li>
-															</ul>
-														</li>
-                                                        <li data-jstree='"type":"png"}'>clear.png</li>
-                                                        <li data-jstree='"type":"ico"}'>favicon.ico</li>
-                                                        <li class="text-navy" data-jstree='"type":"img"}'>green1.png</li>
-                                                    </ul>
-                                                </li>
-                                                <li>pdf
-                                                    <ul>
-                                                        <li data-jstree='"type":"ogg"}'>mamunur.pdf</li>
-                                                    </ul>
-                                                </li>
-                                                <li class="jstree-open">js
-                                                    <ul>
-														<li>c3-charts
-															<ul>
-																<li data-jstree='"type":"js"}'>c3.min.js</li>
-																<li data-jstree='"type":"js"}'>c3-active.js</li>
-																<li data-jstree='"type":"js"}'>d3.min.js</li>
-															</ul>
-														</li>
-														<li>charts
-															<ul>
-																<li data-jstree='"type":"js"}'>area-chart.js</li>
-																<li data-jstree='"type":"js"}'>bar-chart.js</li>
-																<li data-jstree='"type":"js"}'>Chart.js</li>
-																<li data-jstree='"type":"js"}'>line-chart.js</li>
-																<li data-jstree='"type":"js"}'>rounded-chart.js</li>
-															</ul>
-														</li>
-														<li>chat-active
-															<ul>
-																<li data-jstree='"type":"js"}'>jquery.chat.js</li>
-															</ul>
-														</li>
-														<li>chosen
-															<ul>
-																<li data-jstree='"type":"js"}'>chosen.jquery.js</li>
-																<li data-jstree='"type":"js"}'>chosen-active.js</li>
-															</ul>
-														</li>
-														<li>code-editor
-															<ul>
-																<li data-jstree='"type":"js"}'>code-editor.js</li>
-																<li data-jstree='"type":"js"}'>code-editor-active.js</li>
-																<li data-jstree='"type":"js"}'>codemirror.js</li>
-															</ul>
-														</li>
-														<li>colorpicker
-															<ul>
-																<li data-jstree='"type":"js"}'>color-picker-active.js</li>
-																<li data-jstree='"type":"js"}'>jquery.spectrum.min.js</li>
-															</ul>
-														</li>
-														<li>counterup
-															<ul>
-																<li data-jstree='"type":"js"}'>counterup-active.js</li>
-																<li data-jstree='"type":"js"}'>jquery.counterup.min.js</li>
-																<li data-jstree='"type":"js"}'>waypoints.min.js</li>
-															</ul>
-														</li>
-														<li>cropper
-															<ul>
-																<li data-jstree='"type":"js"}'>cropper.min.js</li>
-																<li data-jstree='"type":"js"}'>cropper-actice.js</li>
-															</ul>
-														</li>
-														<li>data-map
-															<ul>
-																<li data-jstree='"type":"js"}'>bootstrap3-typeahead.min.js</li>
-																<li data-jstree='"type":"js"}'>d3.min.js</li>
-																<li data-jstree='"type":"js"}'>datamaps.all.min.js</li>
-																<li data-jstree='"type":"js"}'>data-maps-active.js</li>
-																<li data-jstree='"type":"js"}'>topojson.js</li>
-															</ul>
-														</li>
-														<li>datapicker
-															<ul>
-																<li data-jstree='"type":"js"}'>bootstrap-datepicker.js</li>
-																<li data-jstree='"type":"js"}'>datepicker-active.js</li>
-															</ul>
-														</li>
-														<li>data-table
-															<ul>
-																<li data-jstree='"type":"js"}'>bootstrap-editable.js</li>
-																<li data-jstree='"type":"js"}'>bootstrap-table.js</li>
-																<li data-jstree='"type":"js"}'>bootstrap-table-cookie.js</li>
-																<li data-jstree='"type":"js"}'>bootstrap-table-editable.js</li>
-																<li data-jstree='"type":"js"}'>bootstrap-table-export.js</li>
-																<li data-jstree='"type":"js"}'>bootstrap-table-key-events.js</li>
-																<li data-jstree='"type":"js"}'>bootstrap-table-resizable.js</li>
-																<li data-jstree='"type":"js"}'>colResizable-1.5.source.js</li>
-																<li data-jstree='"type":"js"}'>data-table-active.js</li>
-																<li data-jstree='"type":"js"}'>tableExport.js</li>
-															</ul>
-														</li>
-														<li>duallistbox
-															<ul>
-																<li data-jstree='"type":"js"}'>duallistbox.active.js</li>
-																<li data-jstree='"type":"js"}'>jquery.bootstrap-duallistbox.js</li>
-															</ul>
-														</li>
-														<li>flot
-															<ul>
-																<li data-jstree='"type":"js"}'>Chart.min.js</li>
-																<li data-jstree='"type":"js"}'>dashtwo-flot-active.js</li>
-																<li data-jstree='"type":"js"}'>flot-active.js</li>
-																<li data-jstree='"type":"js"}'>jquery.flot.js</li>
-																<li data-jstree='"type":"js"}'>jquery.flot.pie.js</li>
-																<li data-jstree='"type":"js"}'>jquery.flot.resize.js</li>
-																<li data-jstree='"type":"js"}'>jquery.flot.spline.js</li>
-																<li data-jstree='"type":"js"}'>jquery.flot.symbol.js</li>
-																<li data-jstree='"type":"js"}'>jquery.flot.time.js</li>
-																<li data-jstree='"type":"js"}'>jquery.flot.tooltip.min.js</li>
-																<li data-jstree='"type":"js"}'>widget-flot-chart-active.js</li>
-															</ul>
-														</li>
-														<li>google.maps
-															<ul>
-																<li data-jstree='"type":"js"}'>google.maps-active.js</li>
-															</ul>
-														</li>
-														<li>icheck
-															<ul>
-																<li data-jstree='"type":"js"}'>icheck.min.js</li>
-																<li data-jstree='"type":"js"}'>icheck-active.js</li>
-															</ul>
-														</li>
-														<li>input-mask
-															<ul>
-																<li data-jstree='"type":"js"}'>jasny-bootstrap.min.js</li>
-															</ul>
-														</li>
-														<li>ionRangeSlider
-															<ul>
-																<li data-jstree='"type":"js"}'>ion.rangeSlider.active.js</li>
-																<li data-jstree='"type":"js"}'>ion.rangeSlider.min.js</li>
-															</ul>
-														</li>
-														<li>jvectormap
-															<ul>
-																<li data-jstree='"type":"js"}'>jquery-jvectormap-2.0.2.min.js</li>
-																<li data-jstree='"type":"js"}'>jquery-jvectormap-world-mill-en.js</li>
-																<li data-jstree='"type":"js"}'>jvectormap-active.js</li>
-															</ul>
-														</li>
-														<li>knob
-															<ul>
-																<li data-jstree='"type":"js"}'>jquery.knob.js</li>
-																<li data-jstree='"type":"js"}'>knob-active.js</li>
-															</ul>
-														</li>
-														<li>map
-															<ul>
-																<li data-jstree='"type":"js"}'>france_departments.js</li>
-																<li data-jstree='"type":"js"}'>jquery.mapael.js</li>
-																<li data-jstree='"type":"js"}'>map-active.js</li>
-																<li data-jstree='"type":"js"}'>raphael.min.js</li>
-																<li data-jstree='"type":"js"}'>usa_states.js</li>
-																<li data-jstree='"type":"js"}'>world_countries.js</li>
-															</ul>
-														</li>
-														<li>multiple-email
-															<ul>
-																<li data-jstree='"type":"js"}'>multiple-email-active.js</li>
-															</ul>
-														</li>
-														<li>password-meter
-															<ul>
-																<li data-jstree='"type":"js"}'>password-meter-active.js</li>
-																<li data-jstree='"type":"js"}'>pwstrength-bootstrap.min.js</li>
-																<li data-jstree='"type":"js"}'>zxcvbn.js</li>
-															</ul>
-														</li>
-														<li>pdf
-															<ul>
-																<li data-jstree='"type":"js"}'>jquery.media.js</li>
-																<li data-jstree='"type":"js"}'>pdf-active.js</li>
-															</ul>
-														</li>
-														<li>peity
-															<ul>
-																<li data-jstree='"type":"js"}'>jquery.peity.min.js</li>
-																<li data-jstree='"type":"js"}'>peity-active.js</li>
-															</ul>
-														</li>
-														<li>rangle-slider
-															<ul>
-																<li data-jstree='"type":"js"}'>jquery-ui-1.10.4.custom.min.js</li>
-																<li data-jstree='"type":"js"}'>jquery-ui-touch-punch.min.js</li>
-																<li data-jstree='"type":"js"}'>rangle-active.js</li>
-															</ul>
-														</li>
-														<li>rounded-counter
-															<ul>
-																<li data-jstree='"type":"js"}'>jquery.appear.js</li>
-																<li data-jstree='"type":"js"}'>jquery.countdown.min.js</li>
-																<li data-jstree='"type":"js"}'>jquery.knob.js</li>
-																<li data-jstree='"type":"js"}'>knob-active.js</li>
-															</ul>
-														</li>
-														<li>select2
-															<ul>
-																<li data-jstree='"type":"js"}'>select2.full.min.js</li>
-																<li data-jstree='"type":"js"}'>select2-active.js</li>
-															</ul>
-														</li>
-														<li>skycons
-															<ul>
-																<li data-jstree='"type":"js"}'>skycons.active.js</li>
-																<li data-jstree='"type":"js"}'>skycons.min.js</li>
-															</ul>
-														</li>
-														<li>skycons
-															<ul>
-																<li data-jstree='"type":"js"}'>sparkline-active.js</li>
-																<li data-jstree='"type":"js"}'>jquery.sparkline.min.js</li>
-															</ul>
-														</li>
-														<li>switcher
-															<ul>
-																<li data-jstree='"type":"js"}'>styleswitch.js</li>
-																<li data-jstree='"type":"js"}'>switch-active.js</li>
-															</ul>
-														</li>
-														<li>todo
-															<ul>
-																<li data-jstree='"type":"js"}'>jquery.todo.js</li>
-															</ul>
-														</li>
-														<li>touchspin
-															<ul>
-																<li data-jstree='"type":"js"}'>jquery.bootstrap-touchspin.min.js</li>
-																<li data-jstree='"type":"js"}'>touchspin-active.js</li>
-															</ul>
-														</li>
-														<li>tree-line
-															<ul>
-																<li data-jstree='"type":"js"}'>jstree.active.js</li>
-																<li data-jstree='"type":"js"}'>jstree.min.js</li>
-															</ul>
-														</li>
-														<li>vendor
-															<ul>
-																<li data-jstree='"type":"js"}'>jquery-1.11.3.min.js</li>
-																<li data-jstree='"type":"js"}'>modernizr-2.8.3.min.js</li>
-															</ul>
-														</li>
-														<li>wow
-															<ul>
-																<li data-jstree='"type":"js"}'>wow.min.js</li>
-															</ul>
-														</li>
-                                                        <li data-jstree='"type":"js"}'>bootstrap.min.js</li>
-                                                        <li data-jstree='"type":"js"}'>jquery-ui.min.js</li>
-                                                        <li data-jstree='"type":"js"}'>jquery.meanmenu.js</li>
-                                                        <li data-jstree='"type":"js"}'>jquery-1.11.3.min.js</li>
-                                                        <li data-jstree='"type":"js"}'>modernizr-2.8.3.min.js</li>
-                                                        <li class="text-navy" data-jstree='"type":"js"}'>jquery.mCustomScrollbar.concat.min.js</li>
-                                                        <li class="text-navy" data-jstree='"type":"js"}'>bootstrap.min.js</li>
-                                                        <li class="text-navy" data-jstree='"type":"js"}'>bootstrap-datetimepicker.js</li>
-                                                        <li class="text-navy" data-jstree='"type":"js"}'>bootstrap-editable.js</li>
-                                                        <li class="text-navy" data-jstree='"type":"js"}'>datepicker-active.js</li>
-                                                        <li class="text-navy" data-jstree='"type":"js"}'>dropzone.js</li>
-                                                        <li class="text-navy" data-jstree='"type":"js"}'>form-active.js</li>
-                                                        <li class="text-navy" data-jstree='"type":"js"}'>jquery.form.min.js</li>
-                                                        <li class="text-navy" data-jstree='"type":"js"}'>jquery.maskedinput.min.js</li>
-                                                        <li class="text-navy" data-jstree='"type":"js"}'>jquery.mCustomScrollbar.concat.min.js</li>
-                                                        <li class="text-navy" data-jstree='"type":"js"}'>jquery.meanmenu.js</li>
-                                                        <li class="text-navy" data-jstree='"type":"js"}'>jquery.mockjax.js</li>
-                                                        <li class="text-navy" data-jstree='"type":"js"}'>jquery.scrollUp.min.js</li>
-                                                        <li class="text-navy" data-jstree='"type":"js"}'>jquery.sticky.js</li>
-                                                        <li class="text-navy" data-jstree='"type":"js"}'>jquery.validate.min.js</li>
-                                                        <li class="text-navy" data-jstree='"type":"js"}'>jquery-ui.min.js</li>
-                                                        <li class="text-navy" data-jstree='"type":"js"}'>Lobibox.js</li>
-                                                        <li class="text-navy" data-jstree='"type":"js"}'>main.js</li>
-                                                        <li class="text-navy" data-jstree='"type":"js"}'>masking-active.js</li>
-                                                        <li class="text-navy" data-jstree='"type":"js"}'>mock-active.js</li>
-                                                        <li class="text-navy" data-jstree='"type":"js"}'>modal-active.js</li>
-                                                        <li class="text-navy" data-jstree='"type":"js"}'>moment.min.js</li>
-                                                        <li class="text-navy" data-jstree='"type":"js"}'>notification-active.js</li>
-                                                        <li class="text-navy" data-jstree='"type":"js"}'>select2.js</li>
-                                                        <li class="text-navy" data-jstree='"type":"js"}'>summernote.min.js</li>
-                                                        <li class="text-navy" data-jstree='"type":"js"}'>summernote-active.js</li>
-                                                        <li class="text-navy" data-jstree='"type":"js"}'>typeahead.js</li>
-                                                        <li class="text-navy" data-jstree='"type":"js"}'>typeaheadjs.js</li>
-                                                        <li class="text-navy" data-jstree='"type":"js"}'>xediable-active.js</li>
-                                                    </ul>
-                                                </li>
-                                                <li data-jstree='"type":"html"}'> index.html</li>
-                                                <li data-jstree='"type":"html"}'> index-1.html</li>
-                                                <li data-jstree='"type":"html"}'> index-2.html</li>
-                                                <li data-jstree='"type":"html"}'> add-course.html</li>
-                                                <li data-jstree='"type":"html"}'> add-department.html</li>
-                                                <li data-jstree='"type":"html"}'> add-library-assets.html</li>
-                                                <li data-jstree='"type":"html"}'> add-professor.html</li>
-                                                <li data-jstree='"type":"html"}'> add-student.html</li>
-                                                <li data-jstree='"type":"html"}'> all-courses.html</li>
-                                                <li data-jstree='"type":"html"}'> all-professors.html</li>
-                                                <li data-jstree='"type":"html"}'> all-students.html</li>
-                                                <li data-jstree='"type":"html"}'> course-info.html</li>
-                                                <li data-jstree='"type":"html"}'> departments.html</li>
-                                                <li data-jstree='"type":"html"}'> edit-course.html</li>
-                                                <li data-jstree='"type":"html"}'> edit-department.html</li>
-                                                <li data-jstree='"type":"html"}'> edit-library-assets.html</li>
-                                                <li data-jstree='"type":"html"}'> edit-professor.html</li>
-                                                <li data-jstree='"type":"html"}'> edit-student.html</li>
-                                                <li data-jstree='"type":"html"}'> events.html</li>
-                                                <li data-jstree='"type":"html"}'> library-assets.html</li>
-                                                <li data-jstree='"type":"html"}'> professor-profile.html</li>
-                                                <li data-jstree='"type":"html"}'> student-profile.html</li>
-                                                <li data-jstree='"type":"html"}'> 404.html</li>
-                                                <li data-jstree='"type":"html"}'> 500.html</li>
-                                                <li data-jstree='"type":"html"}'> accordion.html</li>
-                                                <li data-jstree='"type":"html"}'> advance-form-element.html</li>
-                                                <li data-jstree='"type":"html"}'> alerts.html</li>
-                                                <li data-jstree='"type":"html"}'> analytics.html</li>
-                                                <li data-jstree='"type":"html"}'> area-charts.html</li>
-                                                <li data-jstree='"type":"html"}'> bar-charts.html</li>
-                                                <li data-jstree='"type":"html"}'> basic-form-element.html</li>
-                                                <li data-jstree='"type":"html"}'> buttons.html</li>
-                                                <li data-jstree='"type":"html"}'> c3.html</li>
-                                                <li data-jstree='"type":"html"}'> code-editor.html</li>
-                                                <li data-jstree='"type":"html"}'> contacts.html</li>
-                                                <li data-jstree='"type":"html"}'> data-maps.html</li>
-                                                <li data-jstree='"type":"html"}'> data-table.html</li>
-                                                <li data-jstree='"type":"html"}'> dual-list-box.html</li>
-                                                <li data-jstree='"type":"html"}'> google-map.html</li>
-                                                <li data-jstree='"type":"html"}'> images-cropper.html</li>
-                                                <li data-jstree='"type":"html"}'> line-charts.html</li>
-                                                <li data-jstree='"type":"html"}'> lock.html</li>
-                                                <li data-jstree='"type":"html"}'> login.html</li>
-                                                <li data-jstree='"type":"html"}'> mailbox.html</li>
-                                                <li data-jstree='"type":"html"}'> mailbox-compose.html</li>
-                                                <li data-jstree='"type":"html"}'> mailbox-view.html</li>
-                                                <li data-jstree='"type":"html"}'> modals.html</li>
-                                                <li data-jstree='"type":"html"}'> multi-upload.html</li>
-                                                <li data-jstree='"type":"html"}'> notifications.html</li>
-                                                <li data-jstree='"type":"html"}'> password-meter.html</li>
-                                                <li data-jstree='"type":"html"}'> password-recovery.html</li>
-                                                <li data-jstree='"type":"html"}'> pdf-viewer.html</li>
-                                                <li data-jstree='"type":"html"}'> peity.html</li>
-                                                <li data-jstree='"type":"html"}'> preloader.html</li>
-                                                <li data-jstree='"type":"html"}'> register.html</li>
-                                                <li data-jstree='"type":"html"}'> rounded-chart.html</li>
-                                                <li data-jstree='"type":"html"}'> sparkline.html</li>
-                                                <li data-jstree='"type":"html"}'> tabs.html</li>
-                                                <li data-jstree='"type":"html"}'> tinymc.html</li>
-                                                <li data-jstree='"type":"html"}'> tree-view.html</li>
-                                                <li data-jstree='"type":"html"}'> widgets.html</li>
-                                                <li data-jstree='"type":"html"}'> x-editable.html</li>
-                                            </ul>
-                                        </li>
-                                    </ul>
-                                </div>
-</pre>
-                </div>
-                <div id="three" class="content fade">
-
-                    <h1> HTML Structure </h1>
-                    <div>The base structure was organized by row, col-** class </div>
-                    <pre>
-<xmp>
-    <div class="container">
-        <div class="row">
-            <div class="col-xs-12">
-                <div class="logo">
-                    <a href="dashboard.html">
-                        <img src="img/logo.png" alt="">
-                    </a>
-                </div>
-            </div><!-- column end -->
-        </div> <!-- row end -->
-    </div> <!-- container end -->
-</xmp>
-</pre>
-
-                </div>
-                
-                <div id="six" class="content fade">
-				
-				<div class="plugins-area">
-					<h1>Plugins</h1>
-					<div class="static-table-list">
-						<table class="table">
-							<thead>
-								<tr>
-									<th>#</th>
-									<th>Plugin Name</th>
-									<th>Description</th>
-								</tr>
-							</thead>
-							<tbody>
-								<tr>
-									<td>1</td>
-									<td>C3 And D3</td>
-									<td>we are going to show you how to get started with C3 and <a href="http://c3js.org/gettingstarted.html">read more</a></td>
-								</tr>
-								<tr>
-									<td>2</td>
-									<td>Chart</td>
-									<td>Simple yet flexible JavaScript charting for designers & developersand <a href="http://www.chartjs.org/">read more</a></td>
-								</tr>
-								<tr>
-									<td>3</td>
-									<td>Chosen</td>
-									<td>Chosen is a jQuery plugin that makes long and <a href="https://harvesthq.github.io/chosen/">read more</a></td>
-								</tr>
-								<tr>
-									<td>4</td>
-									<td>CodeMirror</td>
-									<td>CodeMirror is a versatile text editor implemented in JavaScript for the browser and <a href="http://codemirror.net/index.html">read more</a></td>
-								</tr>
-								<tr>
-									<td>5</td>
-									<td>Colorpicker</td>
-									<td>Satisfied with the solutions available for colorpicking and <a href="http://bgrins.github.io/spectrum/">read more</a></td>
-								</tr>
-								<tr>
-									<td>6</td>
-									<td>counterup</td>
-									<td>COUNTER-UP JQUERY PLUGIN and <a href="http://bfintal.github.io/Counter-Up/demo/demo.html">read more</a></td>
-								</tr>
-								<tr>
-									<td>7</td>
-									<td>Cropper</td>
-									<td>A simple jQuery image cropping plugin and <a href="https://fengyuanchen.github.io/cropper/">read more</a></td>
-								</tr>
-								<tr>
-									<td>8</td>
-									<td>Data Map</td>
-									<td>HTML5 maps look gorgeous on iPhones, Android devices and iPads <a href="http://simplemaps.com/us">read more</a></td>
-								</tr>
-								<tr>
-									<td>9</td>
-									<td>Datepicker</td>
-									<td>Bootstrap-datepicker provides a flexible datepicker widget in the Bootstrap style and <a href="https://bootstrap-datepicker.readthedocs.io/en/stable/">read more</a></td>
-								</tr>
-								<tr>
-									<td>10</td>
-									<td>X-editable</td>
-									<td>X-editable can be used with any engine (bootstrap, jquery-ui, jquery only) and includes both popup and inline modes and <a href="http://vitalets.github.io/x-editable/">Read More</a></td>
-								</tr>
-								<tr>
-									<td>11</td>
-									<td>Dual Listbox</td>
-									<td>Bootstrap Dual Listbox is a responsive dual listbox widget optimized for Twitter Bootstrap and <a href="https://www.virtuosoft.eu/code/bootstrap-duallistbox/">Read More</a></td>
-								</tr>
-								<tr>
-									<td>12</td>
-									<td>plot Chart</td>
-									<td>Flot is a pure JavaScript plotting library for jQuery, with a focus on simple usage, attractive looks and interactive features and <a href="http://www.flotcharts.org/">Read More</a></td>
-								</tr>
-								<tr>
-									<td>13</td>
-									<td>Google Maps</td>
-									<td>All of the examples contained in the Google Maps JavaScript API documentation set are listed below for quick reference and <a href="https://developers.google.com/maps/documentation/javascript/examples/">Read More</a></td>
-								</tr>
-								<tr>
-									<td>14</td>
-									<td>iCheck</td>
-									<td>UPER CUSTOMIZED CHECKBOXES AND RADIO BUTTONS FOR JQUERY & ZEPTO and <a href="http://icheck.fronteed.com/">Read More</a></td>
-								</tr>
-								<tr>
-									<td>15</td>
-									<td>RangeSlider</td>
-									<td>Ion.RangeSlider 2.2.0. jQuery-plugin Easy, flexible and responsive range slider with skin support and <a href="http://ionden.com/a/plugins/ion.rangeSlider/en.html">Read More</a></td>
-								</tr>
-								<tr>
-									<td>16</td>
-									<td>jvectormap</td>
-									<td>JavaScript-based jVectorMap uses only native browser technologies like JavaScript, CSS, HTML, SVG or VML and <a href="http://jvectormap.com/">Read More</a></td>
-								</tr>
-								<tr>
-									<td>17</td>
-									<td>Knob</td>
-									<td>jQuery Knob mouse click and wheel mouse, keyboard (on focus) and fingers (touch events) and <a href="http://anthonyterrien.com/demo/knob/">Read More</a></td>
-								</tr>
-								<tr>
-									<td>18</td>
-									<td>Mapael</td>
-									<td>Ease the build of pretty data visualizations on dynamic vector maps and <a href="https://www.vincentbroute.fr/mapael/">Read More</a></td>
-								</tr>
-								<tr>
-									<td>19</td>
-									<td>Password Meter</td>
-									<td>jQuery Password Strength Meter for Twitter Bootstrap and <a href="https://cdn.rawgit.com/ablanco/jquery.pwstrength.bootstrap/master/examples/index.html">Read More</a></td>
-								</tr>
-								<tr>
-									<td>20</td>
-									<td>PDF Viewer</td>
-									<td>The jQuery Media Plugin supports unobtrusive conversion of standard markup into rich media content and <a href="http://malsup.com/jquery/media/">Read More</a></td>
-								</tr>
-								<tr>
-									<td>21</td>
-									<td>Peity Charts</td>
-									<td>Peity (sounds like deity) is a jQuery plugin that converts an element's content into a mini pie  donut  line  or bar chart  and is compatible with any browser that supports Chrome, Firefox, IE9+, Opera, Safari and <a href="http://benpickles.github.io/peity/">Read More</a></td>
-								</tr>
-								<tr>
-									<td>22</td>
-									<td>Skycons</td>
-									<td>Skycons is a set of ten animated weather glyphs, procedurally generated by JavaScript using the HTML5 canvas tag and <a href="https://darkskyapp.github.io/skycons/">Read More</a></td>
-								</tr>
-								<tr>
-									<td>23</td>
-									<td>Sparklines</td>
-									<td>This jQuery plugin generates sparklines (small inline charts) directly in the browser using data supplied either inline in the HTML, or via javascript and <a href="https://omnipotent.net/jquery.sparkline/#s-about">Read More</a></td>
-								</tr>
-								<tr>
-									<td>24</td>
-									<td>TouchSpin</td>
-									<td>A mobile and touch friendly input spinner component for Bootstrap 3. It supports the mousewheel and the up/down keys and <a href="https://www.virtuosoft.eu/code/bootstrap-touchspin/">Read More</a></td>
-								</tr>
-								<tr>
-									<td>25</td>
-									<td>jsTree</td>
-									<td>jsTree is jquery plugin, that provides interactive trees. It is absolutely free, open source and distributed under the MIT license. jsTree is easily extendable, themable and configurable, it supports HTML & JSON data sources and AJAX loading and <a href="https://www.jstree.com/">Read More</a></td>
-								</tr>
-								<tr>
-									<td>26</td>
-									<td>Lobibox</td>
-									<td>Free responsive jQuery messagebox and notification plugin available for commercial and non-commercial usages and <a href="http://lobianijs.com/site/lobibox">Read More</a></td>
-								</tr>
-								<tr>
-									<td>26</td>
-									<td>WOW</td>
-									<td>Reveal Animations When You Scroll. Very Animate.css Friend :-) Easily customize animation settings: style, delay, length, offset, iterations... and <a href="http://mynameismatthieu.com/WOW/">Read More</a></td>
-								</tr>
-								<tr>
-									<td>27</td>
-									<td>Data Table</td>
-									<td>An extended Bootstrap table with radio, checkbox, sort, pagination, and other added features and <a href="http://issues.wenzhixin.net.cn/bootstrap-table/">Read More</a></td>
-								</tr>
-								<tr>
-									<td>28</td>
-									<td>Custom scrollbar</td>
-									<td>Highly customizable custom scrollbar jQuery plugin. Features include vertical and/or horizontal scrollbar(s), adjustable scrolling momentum, mouse-wheel and <a href="http://manos.malihu.gr/jquery-custom-content-scroller/">Read More</a></td>
-								</tr>
-								<tr>
-									<td>29</td>
-									<td>Summernote</td>
-									<td>Customize by Initializing various options and modules and <a href="https://summernote.org/">Read More</a></td>
-								</tr>
-							</tbody>
-						</table>
-					</div>
-				</div>
-                    
-                    
-                    <h1>Tinymc Editor Structure</h1>
-					<h3>Quick start</h3>
-			<p>Copy-paste the stylesheet "link" into your "head" before all other stylesheets to load our CSS.</p>
-			<pre>
-	<xmp>
-	<!-- summernote CSS
-		============================================ -->
-        <link rel="stylesheet" href="css/summernote.css">
-	</xmp>
-</pre>
-<p>The end of your pages, right before the closing "body" tag. Be sure to place js first, as our JavaScript plugins depend on them. </p>
-			<pre>
-	<xmp>
-	<!-- summernote JS
-		============================================ -->
-        <script src="js/summernote.min.js"></script>
-        <script src="js/summernote-active.js"></script>
-	</xmp>
-</pre>
-                    
-                    <pre>
-                        <xmp>
-    <div class="tinymce-single nt-mg-b-30">
-		<div class="alert-title">
-			<h2>Basic Summernote WYSIWYG editor</h2>
-			<p>The fastest way to get Summernote WYSIWYG editor is powerfull JavaScript plugin. you can easily maintance typography system.</p>
-		</div>
-		<div id="summernote1">
-		</div>
-	</div>                             
-                        </xmp>
-                    </pre>
-                    
-                    
-                </div>
-                
-                
-                <div id="source" class="content fade">
-                    <h1> Sources &amp; Credits </h1>
-                    
-                    <h3>Fonts</h3>
-                    <ul>
-                        <li><a href="https://fonts.googleapis.com/">Google Fonts</a></li>
-                    </ul>
-                    
-                    <h3>Icons</h3>
-                    <ul>
-                        <li><a href="http://fontawesome.io/">Font Awesome</a></li>
-                    </ul>
-                    <h3>Scripts</h3>
-                    <ul>
-                        <li><a href="http://benpickles.github.io/peity/">Peity Charts</a></li>
-                        <li><a href="https://omnipotent.net/jquery.sparkline/#s-about">Sparklines</a></li>
-                        <li><a href="http://manos.malihu.gr/jquery-custom-content-scroller/">Scrollbar</a></li>
-                        <li><a href="https://www.virtuosoft.eu/code/bootstrap-touchspin/">TouchSpin</a></li>
-                        <li><a href="http://issues.wenzhixin.net.cn/bootstrap-table/">Data Table</a></li>
-                        <li><a href="https://www.jstree.com/">JsTree</a></li>
-                        <li><a href="https://darkskyapp.github.io/skycons/">Skycons</a></li>
-                        <li><a href="https://cdn.rawgit.com/ablanco/jquery.pwstrength.bootstrap/master/examples/index.html">Password Meter</a></li>
-                        <li><a href="http://malsup.com/jquery/media/">PDF Viewer</a></li>
-                        <li><a href="https://www.vincentbroute.fr/mapael/">Mapael</a></li>
-                        <li><a href="http://jvectormap.com/">jvectormap</a></li>
-                        <li><a href="http://ionden.com/a/plugins/ion.rangeSlider/en.html">RangeSlider</a></li>
-                        <li><a href="https://fengyuanchen.github.io/cropper/">Cropper</a></li>
-                        <li><a href="http://simplemaps.com/us">Data Map</a></li>
-                        <li><a href="http://codemirror.net/index.html">CodeMirror</a></li>
-                        <li><a href="https://harvesthq.github.io/chosen/">Chosen</a></li>
-                        <li><a href="http://c3js.org/gettingstarted.html">C3 And D3</a></li>
-                        <li><a href="https://www.malot.fr/bootstrap-datetimepicker/">datetimepicker</a></li>
-                        <li><a href="http://github.com/vitalets/x-editable">x-editable</a></li>
-                        <li><a href="http://www.dropzonejs.com//">dropzonejs</a></li>
-                        <li><a href="http://jquery.malsup.com/form/#ajaxForm">form Validation</a></li>
-                        <li><a href="https://github.com/jzaefferer/jquery-validation">form Validation</a></li>
-                        <li><a href="http://digitalbush.com/projects/masked-input-plugin/#license">masked input</a></li>
-                        <li><a href="https://github.com/jakerella/jquery-mockjax">mockjax</a></li>
-                        <li><a href="https://lobianijs.com/site/lobibox">lobibox</a></li>
-                        <li><a href="http://summernote.org/">summernote</a></li>
-                        <li><a href="https://vitalets.github.io/x-editable/">editable</a></li>
-                    </ul>
-                </div>
-                <div id="support" class="content fade">
-                    <h1> Supports </h1>
-                    <p>Thank you for reading the documentaion. If you still have any question or any problem, please contact with us. We will give you best support. Thanks.</p>
-                    <a href="https://colorlib.com/wp/forums/" >SRThemes</a>
-                </div>
-                <div id="nine" class="content fade">
-                    <h1> Sliders Structure </h1>
-                    <div>The base structure was organized by row, col-** class </div>
-                    <pre>
-    <xmp>
-    <!-- code will be here -->
-    </xmp>
-</pre>
-                    <!-- code pre tag end -->
-                </div>
+        <!-- Small Brand information, appears on minimized sidebar--><a class="brand-small text-center" href="index.html">
+          <p class="h1 m-0">BD</p></a>
+      </div>
+      <!-- Sidebar Navigation Menus--><span class="text-uppercase text-gray-500 text-sm fw-bold letter-spacing-0 mx-lg-2 heading">Main</span>
+      <ul class="list-unstyled">                  
+        <li class="sidebar-item"><a class="sidebar-link" href="index.html"> 
+            <svg class="svg-icon svg-icon-sm svg-icon-heavy me-xl-2">
+              <use xlink:href="#real-estate-1"> </use>
+            </svg>Home </a></li>
+        <li class="sidebar-item"><a class="sidebar-link" href="forms.html"> 
+            <svg class="svg-icon svg-icon-sm svg-icon-heavy me-xl-2">
+              <use xlink:href="#survey-1"> </use>
+            </svg>Forms </a></li>
+        <li class="sidebar-item"><a class="sidebar-link" href="charts.html"> 
+            <svg class="svg-icon svg-icon-sm svg-icon-heavy me-xl-2">
+              <use xlink:href="#sales-up-1"> </use>
+            </svg>Charts </a></li>
+        <li class="sidebar-item"><a class="sidebar-link" href="tables.html"> 
+            <svg class="svg-icon svg-icon-sm svg-icon-heavy me-xl-2">
+              <use xlink:href="#portfolio-grid-1"> </use>
+            </svg>Tables </a></li>
+        <li class="sidebar-item"><a class="sidebar-link" href="#exampledropdownDropdown" data-bs-toggle="collapse"> 
+            <svg class="svg-icon svg-icon-sm svg-icon-heavy me-xl-2">
+              <use xlink:href="#browser-window-1"> </use>
+            </svg>Example dropdown </a>
+          <ul class="collapse list-unstyled " id="exampledropdownDropdown">
+            <li><a class="sidebar-link" href="#">Page</a></li>
+            <li><a class="sidebar-link" href="#">Page</a></li>
+            <li><a class="sidebar-link" href="#">Page</a></li>
+          </ul>
+        </li>
+        <li class="sidebar-item"><a class="sidebar-link" href="login.html"> 
+            <svg class="svg-icon svg-icon-sm svg-icon-heavy me-xl-2">
+              <use xlink:href="#disable-1"> </use>
+            </svg>Login page </a></li>
+        <li class="sidebar-item"><a class="sidebar-link" href="#!"> 
+            <svg class="svg-icon svg-icon-xs svg-icon-heavy me-xl-2">
+              <use xlink:href="#imac-screen-1"> </use>
+            </svg>Demo
+            <div class="badge bg-warning">6 New</div></a></li>
+      </ul><span class="text-uppercase text-gray-500 text-sm fw-bold letter-spacing-0 mx-lg-2 heading">Second menu</span>
+      <ul class="list-unstyled py-4">
+        <li class="sidebar-item"> <a class="sidebar-link" href="#!"> 
+            <svg class="svg-icon svg-icon-xs svg-icon-heavy me-xl-2">
+              <use xlink:href="#chart-1"> </use>
+            </svg>Demo</a></li>
+        <li class="sidebar-item"> <a class="sidebar-link" href="">
+            <svg class="svg-icon svg-icon-xs svg-icon-heavy me-xl-2">
+              <use xlink:href="#imac-screen-1"> </use>
+            </svg>Demo
+            <div class="badge bg-info">Special</div></a></li>
+        <li class="sidebar-item"> <a class="sidebar-link" href=""> 
+            <svg class="svg-icon svg-icon-xs svg-icon-heavy me-xl-2">
+              <use xlink:href="#quality-1"> </use>
+            </svg>Demo</a></li>
+        <li class="sidebar-item"> <a class="sidebar-link" href=""> 
+            <svg class="svg-icon svg-icon-xs svg-icon-heavy me-xl-2">
+              <use xlink:href="#security-shield-1"> </use>
+            </svg>Demo</a></li>
+      </ul>
+    </nav>
+    <div class="page">
+      <!-- navbar-->
+      <header class="header">
+        <nav class="navbar">
+          <div class="container-fluid">
+            <div class="d-flex align-items-center justify-content-between w-100">
+              <div class="d-flex align-items-center"><a class="menu-btn d-flex align-items-center justify-content-center p-2 bg-gray-900" id="toggle-btn" href="#">
+                  <svg class="svg-icon svg-icon-sm svg-icon-heavy text-white">
+                    <use xlink:href="#menu-1"> </use>
+                  </svg></a><a class="navbar-brand ms-2" href="index.html">
+                  <div class="brand-text d-none d-md-inline-block text-uppercase letter-spacing-0"><span class="text-white fw-normal text-xs">Bootstrap </span><strong class="text-primary text-sm">Dashboard</strong></div></a></div>
+              <ul class="nav-menu mb-0 list-unstyled d-flex flex-md-row align-items-md-center">
+                <!-- Notifications dropdown-->
+                <li class="nav-item dropdown"> <a class="nav-link text-white position-relative" id="notifications" rel="nofollow" data-bs-target="#" href="#" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <svg class="svg-icon svg-icon-xs svg-icon-heavy">
+                      <use xlink:href="#chart-1"> </use>
+                    </svg><span class="badge bg-warning">12</span></a>
+                  <ul class="dropdown-menu dropdown-menu-end mt-sm-3 shadow-sm" aria-labelledby="notifications">
+                    <li><a class="dropdown-item py-3" href="#!"> 
+                        <div class="d-flex">
+                          <div class="icon icon-sm bg-blue">
+                            <svg class="svg-icon svg-icon-xs svg-icon-heavy">
+                              <use xlink:href="#envelope-1"> </use>
+                            </svg>
+                          </div>
+                          <div class="ms-3"><span class="h6 d-block fw-normal mb-1 text-xs text-gray-600">You have 6 new messages </span><small class="small text-gray-600">4 minutes ago</small></div>
+                        </div></a></li>
+                    <li><a class="dropdown-item py-3" href="#!"> 
+                        <div class="d-flex">
+                          <div class="icon icon-sm bg-green">
+                            <svg class="svg-icon svg-icon-xs svg-icon-heavy">
+                              <use xlink:href="#chats-1"> </use>
+                            </svg>
+                          </div>
+                          <div class="ms-3"><span class="h6 d-block fw-normal mb-1 text-xs text-gray-600">New 2 WhatsApp messages</span><small class="small text-gray-600">4 minutes ago</small></div>
+                        </div></a></li>
+                    <li><a class="dropdown-item py-3" href="#!"> 
+                        <div class="d-flex">
+                          <div class="icon icon-sm bg-orange">
+                            <svg class="svg-icon svg-icon-xs svg-icon-heavy">
+                              <use xlink:href="#checked-window-1"> </use>
+                            </svg>
+                          </div>
+                          <div class="ms-3"><span class="h6 d-block fw-normal mb-1 text-xs text-gray-600">Server Rebooted</span><small class="small text-gray-600">8 minutes ago</small></div>
+                        </div></a></li>
+                    <li><a class="dropdown-item py-3" href="#!"> 
+                        <div class="d-flex">
+                          <div class="icon icon-sm bg-green">
+                            <svg class="svg-icon svg-icon-xs svg-icon-heavy">
+                              <use xlink:href="#chats-1"> </use>
+                            </svg>
+                          </div>
+                          <div class="ms-3"><span class="h6 d-block fw-normal mb-1 text-xs text-gray-600">New 2 WhatsApp messages</span><small class="small text-gray-600">10 minutes ago</small></div>
+                        </div></a></li>
+                    <li><a class="dropdown-item all-notifications text-center" href="#!"> <strong class="text-xs text-gray-600">view all notifications                                            </strong></a></li>
+                  </ul>
+                </li>
+                <!-- Messages dropdown-->
+                <li class="nav-item dropdown"> <a class="nav-link text-white position-relative" id="messages" rel="nofollow" data-bs-target="#" href="#" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <svg class="svg-icon svg-icon-xs svg-icon-heavy">
+                      <use xlink:href="#envelope-1"> </use>
+                    </svg><span class="badge bg-info">10</span></a>
+                  <ul class="dropdown-menu dropdown-menu-end mt-sm-3 shadow-sm" aria-labelledby="messages">
+                    <li><a class="dropdown-item d-flex py-3" href="#!"> <img class="img-fluid rounded-circle flex-shrink-0 avatar shadow-0" src="img/avatar-1.jpg" alt="..." width="45">
+                        <div class="ms-3"><span class="h6 d-block fw-normal mb-1 text-sm text-gray-600">Jason Doe</span><small class="small text-gray-600"> Sent You Message</small>
+                          <p class="mb-0 small text-gray-600">3 days ago at 7:58 pm - 10.06.2014</p>
+                        </div></a></li>
+                    <li><a class="dropdown-item d-flex py-3" href="#!"> <img class="img-fluid rounded-circle flex-shrink-0 avatar shadow-0" src="img/avatar-2.jpg" alt="..." width="45">
+                        <div class="ms-3"><span class="h6 d-block fw-normal mb-1 text-sm text-gray-600">Jason Doe</span><small class="small text-gray-600"> Sent You Message</small>
+                          <p class="mb-0 small text-gray-600">3 days ago at 7:58 pm - 10.06.2014</p>
+                        </div></a></li>
+                    <li><a class="dropdown-item d-flex py-3" href="#!"> <img class="img-fluid rounded-circle flex-shrink-0 avatar shadow-0" src="img/avatar-3.jpg" alt="..." width="45">
+                        <div class="ms-3"><span class="h6 d-block fw-normal mb-1 text-sm text-gray-600">Jason Doe</span><small class="small text-gray-600"> Sent You Message</small>
+                          <p class="mb-0 small text-gray-600">3 days ago at 7:58 pm - 10.06.2014</p>
+                        </div></a></li>
+                    <li><a class="dropdown-item text-center" href="#!"> <strong class="text-xs text-gray-600">Read all messages       </strong></a></li>
+                  </ul>
+                </li>
+                <!-- Languages dropdown    -->
+                <li class="nav-item dropdown"><a class="nav-link dropdown-toggle text-white text-sm" id="languages" rel="nofollow" data-bs-target="#" href="#" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="img/flags/16/GB.png" alt="English"><span class="d-none d-sm-inline-block ms-2">English</span></a>
+                  <ul class="dropdown-menu dropdown-menu-end mt-sm-3 shadow-sm" aria-labelledby="languages">
+                    <li><a class="dropdown-item" rel="nofollow" href="#!"> <img class="me-2" src="img/flags/16/DE.png" alt="English"><span>German</span></a></li>
+                    <li><a class="dropdown-item" rel="nofollow" href="#!"> <img class="me-2" src="img/flags/16/FR.png" alt="English"><span>French                                                         </span></a></li>
+                  </ul>
+                </li>
+                <!-- Log out-->
+                <li class="nav-item"><a class="nav-link text-white text-sm ps-0" href="login.html"> <span class="d-none d-sm-inline-block">Logout</span>
+                    <svg class="svg-icon svg-icon-xs svg-icon-heavy">
+                      <use xlink:href="#security-1"> </use>
+                    </svg></a></li>
+              </ul>
             </div>
+          </div>
+        </nav>
+      </header>
+      <!-- Counts Section -->
+      <section class="py-5">
+        <div class="container-fluid">
+          <div class="row">
+            <!-- Count item widget-->
+            <div class="col-xl-2 col-md-4 col-6 gy-4 gy-xl-0">
+              <div class="d-flex">
+                <svg class="svg-icon svg-icon-sm svg-icon-heavy text-primary mt-1 flex-shrink-0">
+                  <use xlink:href="#user-1"> </use>
+                </svg>
+                <div class="ms-2">
+                  <h3 class="h4 text-dark text-uppercase fw-normal">New Clients</h3>
+                  <p class="text-gray-500 small">Last 7 days</p>
+                  <p class="display-6 mb-0">25</p>
+                </div>
+              </div>
+            </div>
+            <!-- Count item widget-->
+            <div class="col-xl-2 col-md-4 col-6 gy-4 gy-xl-0">
+              <div class="d-flex">
+                <svg class="svg-icon svg-icon-sm svg-icon-heavy text-primary mt-1 flex-shrink-0">
+                  <use xlink:href="#survey-1"> </use>
+                </svg>
+                <div class="ms-2">
+                  <h3 class="h4 text-dark text-uppercase fw-normal">Work Orders</h3>
+                  <p class="text-gray-500 small">Last 5 days</p>
+                  <p class="display-6 mb-0">400</p>
+                </div>
+              </div>
+            </div>
+            <!-- Count item widget-->
+            <div class="col-xl-2 col-md-4 col-6 gy-4 gy-xl-0">
+              <div class="d-flex">
+                <svg class="svg-icon svg-icon-sm svg-icon-heavy text-primary mt-1 flex-shrink-0">
+                  <use xlink:href="#list-details-1"> </use>
+                </svg>
+                <div class="ms-2">
+                  <h3 class="h4 text-dark text-uppercase fw-normal">New Quotes</h3>
+                  <p class="text-gray-500 small">Last 2 months</p>
+                  <p class="display-6 mb-0">342</p>
+                </div>
+              </div>
+            </div>
+            <!-- Count item widget-->
+            <div class="col-xl-2 col-md-4 col-6 gy-4 gy-xl-0">
+              <div class="d-flex">
+                <svg class="svg-icon svg-icon-sm svg-icon-heavy text-primary mt-1 flex-shrink-0">
+                  <use xlink:href="#numbers-1"> </use>
+                </svg>
+                <div class="ms-2">
+                  <h3 class="h4 text-dark text-uppercase fw-normal">New Invoices</h3>
+                  <p class="text-gray-500 small">Last 2 days</p>
+                  <p class="display-6 mb-0">123</p>
+                </div>
+              </div>
+            </div>
+            <!-- Count item widget-->
+            <div class="col-xl-2 col-md-4 col-6 gy-4 gy-xl-0">
+              <div class="d-flex">
+                <svg class="svg-icon svg-icon-sm svg-icon-heavy text-primary mt-1 flex-shrink-0">
+                  <use xlink:href="#literature-1"> </use>
+                </svg>
+                <div class="ms-2">
+                  <h3 class="h4 text-dark text-uppercase fw-normal">Open Cases</h3>
+                  <p class="text-gray-500 small">Last 3 months</p>
+                  <p class="display-6 mb-0">92</p>
+                </div>
+              </div>
+            </div>
+            <!-- Count item widget-->
+            <div class="col-xl-2 col-md-4 col-6 gy-4 gy-xl-0">
+              <div class="d-flex">
+                <svg class="svg-icon svg-icon-sm svg-icon-heavy text-primary mt-1 flex-shrink-0">
+                  <use xlink:href="#paper-stack-1"> </use>
+                </svg>
+                <div class="ms-2">
+                  <h3 class="h4 text-dark text-uppercase fw-normal">New Cases</h3>
+                  <p class="text-gray-500 small">Last 7 days</p>
+                  <p class="display-6 mb-0">70</p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
+      </section>
+      <!-- Header Section-->
+      <section class="bg-white py-5">
+        <div class="container-fluid">
+          <div class="row d-flex align-items-md-stretch">
+            <!-- To Do List-->
+            <div class="col-lg-3 col-md-6">
+              <div class="card shadow-0">
+                <div class="card-body p-0">
+                  <h2 class="h3 fw-normal">To do List</h2>
+                  <p class="text-sm text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                  <form>
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" id="list1">
+                      <label class="form-check-label text-sm" for="list1">Similique sunt in culpa qui officia</label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" id="list2">
+                      <label class="form-check-label text-sm" for="list2">Ed ut perspiciatis unde omnis iste</label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" id="list3">
+                      <label class="form-check-label text-sm" for="list3">At vero eos et accusamus et iusto </label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" id="list4">
+                      <label class="form-check-label text-sm" for="list4">Explicabo Nemo ipsam voluptatem</label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" id="list5">
+                      <label class="form-check-label text-sm" for="list5">Similique sunt in culpa qui officia</label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" id="list6">
+                      <label class="form-check-label text-sm" for="list6">At vero eos et accusamus et iusto</label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" id="list7">
+                      <label class="form-check-label text-sm" for="list7">Similique sunt in culpa qui officia</label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" id="list8">
+                      <label class="form-check-label text-sm" for="list8">Ed ut perspiciatis unde omnis iste</label>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+            <!-- Pie Chart-->
+            <div class="col-lg-3 col-md-6">
+              <div class="card shadow-0">
+                <h2 class="h3 fw-normal">Project Beta progress</h2>
+                <p class="text-sm text-muted"> Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                <div class="pie-chart">
+                  <canvas id="pieChart" style="width: 300px; height: 300px; max-width: 100%"> </canvas>
+                </div>
+              </div>
+            </div>
+            <!-- Line Chart -->
+            <div class="col-lg-6 col-md-12">
+              <div class="card shadow-0">
+                <h2 class="h3 fw-normal">Sales marketing report</h2>
+                <p class="text-sm text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor amet officiis</p>
+                <canvas id="lineCahrt"></canvas>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Statistics Section-->
+      <section class="py-5">
+        <div class="container-fluid">
+          <div class="row align-items-stretch gy-4">
+            <div class="col-lg-4">
+              <!-- Income-->
+              <div class="card text-center h-100 mb-0">
+                <div class="card-body">
+                  <svg class="svg-icon svg-icon-big svg-icon-light mb-4 text-muted">
+                    <use xlink:href="#sales-up-1"> </use>
+                  </svg>
+                  <p class="text-gray-700 display-6">126,418</p>
+                  <p class="text-primary h2 fw-bold">All Income</p>
+                  <p class="text-xs text-gray-600 mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit sed do.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <!-- Monthly Usage-->
+              <div class="card h-100 mb-0">
+                <div class="card-body">
+                  <h2 class="h3 fw-normal mb-4">Monthly Usage</h2>
+                  <div class="row align-items-center mb-3 gx-lg-5">
+                    <div class="col-lg-6">
+                      <table class="w-100">
+                        <tbody>
+                          <tr>
+                            <td>
+                              <div class="position-relative mx-auto" style="max-width: 120px">
+                                <canvas class="mx-auto" id="monthlyProgress" width="150" height="150"></canvas>
+                                <p class="h3 text-primary fw-normal position-absolute top-50 start-50 translate-middle text-center m-0">80%</p>
+                              </div>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                    <div class="col-lg-6 border-start">
+                      <p class="fw-bold h2 text-primary">80.56 Gb</p>
+                      <p class="text-xs fw-light text-gray-500 mb-0">Current Plan</p>
+                      <p class="text-gray-500">100 Gb Monthly</p>
+                    </div>
+                  </div>
+                  <p class="text-xs text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <!-- User Actibity-->
+              <div class="card h-100 mb-0">
+                <div class="card-body">
+                  <h2 class="h3 fw-normal mb-4">User Activity</h2>
+                  <p class="display-6">210</p>
+                  <h3 class="h4 fw-normal">Social Users</h3>
+                  <div class="progress rounded-0 mb-3">
+                    <div class="progress-bar progress-bar bg-primary" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                  </div>
+                  <div class="d-flex justify-content-between">
+                    <div class="text-start">
+                      <p class="h5 fw-normal mb-2">Pages Visits</p>
+                      <p class="fw-bold text-xl text-primary mb-0">230</p>
+                    </div>
+                    <div class="text-end">
+                      <p class="h5 fw-normal mb-2">New Visits</p>
+                      <p class="fw-bold text-xl text-primary mb-0">73.4%</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Updates Section -->
+      <section class="mb-5">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-lg-4 col-md-12">
+              <!-- Recent Updates Widget          -->
+              <div class="card">
+                <div class="card-header border-bottom">
+                  <h2 class="h5 fw-normal mb-0"><a class="card-collapse-link text-dark d-block" data-bs-toggle="collapse" href="#updates-box" aria-expanded="true">News Updates</a></h2>
+                </div>
+                <div class="card-body p-0">
+                  <div class="collapse show" id="updates-box" role="tabpanel">
+                    <ul class="list-unstyled">
+                      <!-- Item-->
+                      <div class="p-3 d-flex justify-content-between">
+                        <div class="d-flex"><i class="fas fa-rss text-gray-600"></i>
+                          <div class="ms-3">
+                            <h5 class="fw-normal text-gray-600 mb-1">Lorem ipsum dolor sit amet.</h5>
+                            <p class="mb-0 text-xs text-gray-500">Lorem ipsum dolor sit amet, consectetur adipisicing elit sed.</p>
+                          </div>
+                        </div>
+                        <div class="text-end ms-2"><strong class="d-block lh-1 h2 mb-0 text-gray-500 fw-bold">24</strong><small class="d-block lh-1 text-gray-500">Jan</small></div>
+                      </div>
+                      <!-- Item-->
+                      <div class="p-3 d-flex justify-content-between bg-light">
+                        <div class="d-flex"><i class="fas fa-rss text-gray-600"></i>
+                          <div class="ms-3">
+                            <h5 class="fw-normal text-gray-600 mb-1">Lorem ipsum dolor sit amet.</h5>
+                            <p class="mb-0 text-xs text-gray-500">Lorem ipsum dolor sit amet, consectetur adipisicing elit sed.</p>
+                          </div>
+                        </div>
+                        <div class="text-end ms-2"><strong class="d-block lh-1 h2 mb-0 text-gray-500 fw-bold">24</strong><small class="d-block lh-1 text-gray-500">Jan</small></div>
+                      </div>
+                      <!-- Item-->
+                      <div class="p-3 d-flex justify-content-between">
+                        <div class="d-flex"><i class="fas fa-rss text-gray-600"></i>
+                          <div class="ms-3">
+                            <h5 class="fw-normal text-gray-600 mb-1">Lorem ipsum dolor sit amet.</h5>
+                            <p class="mb-0 text-xs text-gray-500">Lorem ipsum dolor sit amet, consectetur adipisicing elit sed.</p>
+                          </div>
+                        </div>
+                        <div class="text-end ms-2"><strong class="d-block lh-1 h2 mb-0 text-gray-500 fw-bold">24</strong><small class="d-block lh-1 text-gray-500">Jan</small></div>
+                      </div>
+                      <!-- Item-->
+                      <div class="p-3 d-flex justify-content-between bg-light">
+                        <div class="d-flex"><i class="fas fa-rss text-gray-600"></i>
+                          <div class="ms-3">
+                            <h5 class="fw-normal text-gray-600 mb-1">Lorem ipsum dolor sit amet.</h5>
+                            <p class="mb-0 text-xs text-gray-500">Lorem ipsum dolor sit amet, consectetur adipisicing elit sed.</p>
+                          </div>
+                        </div>
+                        <div class="text-end ms-2"><strong class="d-block lh-1 h2 mb-0 text-gray-500 fw-bold">24</strong><small class="d-block lh-1 text-gray-500">Jan</small></div>
+                      </div>
+                      <!-- Item-->
+                      <div class="p-3 d-flex justify-content-between">
+                        <div class="d-flex"><i class="fas fa-rss text-gray-600"></i>
+                          <div class="ms-3">
+                            <h5 class="fw-normal text-gray-600 mb-1">Lorem ipsum dolor sit amet.</h5>
+                            <p class="mb-0 text-xs text-gray-500">Lorem ipsum dolor sit amet, consectetur adipisicing elit sed.</p>
+                          </div>
+                        </div>
+                        <div class="text-end ms-2"><strong class="d-block lh-1 h2 mb-0 text-gray-500 fw-bold">24</strong><small class="d-block lh-1 text-gray-500">Jan</small></div>
+                      </div>
+                      <!-- Item-->
+                      <div class="p-3 d-flex justify-content-between bg-light">
+                        <div class="d-flex"><i class="fas fa-rss text-gray-600"></i>
+                          <div class="ms-3">
+                            <h5 class="fw-normal text-gray-600 mb-1">Lorem ipsum dolor sit amet.</h5>
+                            <p class="mb-0 text-xs text-gray-500">Lorem ipsum dolor sit amet, consectetur adipisicing elit sed.</p>
+                          </div>
+                        </div>
+                        <div class="text-end ms-2"><strong class="d-block lh-1 h2 mb-0 text-gray-500 fw-bold">24</strong><small class="d-block lh-1 text-gray-500">Jan</small></div>
+                      </div>
+                      <!-- Item-->
+                      <div class="p-3 d-flex justify-content-between">
+                        <div class="d-flex"><i class="fas fa-rss text-gray-600"></i>
+                          <div class="ms-3">
+                            <h5 class="fw-normal text-gray-600 mb-1">Lorem ipsum dolor sit amet.</h5>
+                            <p class="mb-0 text-xs text-gray-500">Lorem ipsum dolor sit amet, consectetur adipisicing elit sed.</p>
+                          </div>
+                        </div>
+                        <div class="text-end ms-2"><strong class="d-block lh-1 h2 mb-0 text-gray-500 fw-bold">24</strong><small class="d-block lh-1 text-gray-500">Jan</small></div>
+                      </div>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <!-- Recent Updates Widget End-->
+            </div>
+            <div class="col-lg-4 col-md-6">
+              <!-- Daily Feed Widget-->
+              <div class="card">
+                <div class="card-header border-bottom">
+                  <h2 class="h5 fw-normal mb-0"><a class="card-collapse-link text-dark d-block" data-bs-toggle="collapse" href="#feeds-box" aria-expanded="true">Your daily Feeds
+                      <div class="badge bg-primary position-absolute end-0 me-4">10 messages</div></a></h2>
+                </div>
+                <div class="card-body-0">
+                  <div class="collapse show" id="feeds-box" role="tabpanel">
+                    <!-- Item-->
+                    <div class="p-3 border-bottom border-gray-200">
+                      <div class="d-flex justify-content-between">
+                        <div class="d-flex"><a class="flex-shrink-0" href="#!"><img class="img-fluid rounded-circle" src="img/avatar-5.jpg" alt="person" width="50"></a>
+                          <div class="ms-3">
+                            <h5 class="fw-normal">Aria Smith</h5>
+                            <p class="mb-0 text-xs text-gray-600 lh-1">Posted a new blog</p><small class="text-gray-600 fw-light">Today 5:60 pm - 12.06.2014</small>
+                          </div>
+                        </div>
+                        <div class="text-end"><small class="text-gray-500">5min ago</small></div>
+                      </div>
+                    </div>
+                    <!-- Item-->
+                    <div class="p-3 border-bottom border-gray-200">
+                      <div class="d-flex justify-content-between">
+                        <div class="d-flex"><a class="flex-shrink-0" href="#!"><img class="img-fluid rounded-circle" src="img/avatar-2.jpg" alt="person" width="50"></a>
+                          <div class="ms-3">
+                            <h5 class="fw-normal">Frank Williams</h5>
+                            <p class="mb-0 text-xs text-gray-600 lh-1">Posted a new blog</p><small class="text-gray-600 fw-light">Today 5:60 pm - 12.06.2014</small>
+                            <div class="d-flex"><a class="btn btn-xs btn-dark py-1 m-1" href="#!"><i class="fas fa-thumbs-up me-1"></i>Like</a><a class="btn btn-xs btn-dark py-1 m-1" href="#!"><i class="fas fa-heart me-1"> </i>Love  </a></div>
+                          </div>
+                        </div>
+                        <div class="text-end"><small class="text-gray-500">5min ago</small></div>
+                      </div>
+                    </div>
+                    <!-- Item-->
+                    <div class="p-3 border-bottom border-gray-200">
+                      <div class="d-flex justify-content-between">
+                        <div class="d-flex"><a class="flex-shrink-0" href="#!"><img class="img-fluid rounded-circle" src="img/avatar-3.jpg" alt="person" width="50"></a>
+                          <div class="ms-3">
+                            <h5 class="fw-normal">Ashley Wood</h5>
+                            <p class="mb-0 text-xs text-gray-600 lh-1">Posted a new blog</p><small class="text-gray-600 fw-light">Today 5:60 pm - 12.06.2014</small>
+                          </div>
+                        </div>
+                        <div class="text-end"><small class="text-gray-500">5min ago</small></div>
+                      </div>
+                    </div>
+                    <!-- Item-->
+                    <div class="p-3 border-bottom border-gray-200">
+                      <div class="d-flex justify-content-between">
+                        <div class="d-flex"><a class="flex-shrink-0" href="#!"><img class="img-fluid rounded-circle" src="img/avatar-1.jpg" alt="person" width="50"></a>
+                          <div class="ms-3">
+                            <h5 class="fw-normal">Jason Doe</h5>
+                            <p class="mb-0 text-xs text-gray-600 lh-1">Posted a new blog</p><small class="text-gray-600 fw-light">Today 5:60 pm - 12.06.2014</small>
+                          </div>
+                        </div>
+                        <div class="text-end"><small class="text-gray-500">5min ago</small></div>
+                      </div>
+                      <div class="mt-3 ms-5 ps-3">
+                        <div class="bg-light p-3 shadow-sm"><small class="text-gray-600">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s. Over the years.</small></div>
+                        <div class="text-end mt-2"><a class="btn btn-xs btn-dark py-1" href="#!"><i class="fas fa-thumbs-up me-1"></i>Like</a></div>
+                      </div>
+                    </div>
+                    <!-- Item-->
+                    <div class="p-3">
+                      <div class="d-flex justify-content-between">
+                        <div class="d-flex"><a class="flex-shrink-0" href="#!"><img class="img-fluid rounded-circle" src="img/avatar-6.jpg" alt="person" width="50"></a>
+                          <div class="ms-3">
+                            <h5 class="fw-normal">Sam Martinez</h5>
+                            <p class="mb-0 text-xs text-gray-600 lh-1">Posted a new blog</p><small class="text-gray-600 fw-light">Today 5:60 pm - 12.06.2014</small>
+                          </div>
+                        </div>
+                        <div class="text-end"><small class="text-gray-500">5min ago</small></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Daily Feed Widget End-->
+            </div>
+            <div class="col-lg-4 col-md-6">
+              <!-- Recent Activities Widget      -->
+              <div class="card">
+                <div class="card-header border-bottom">
+                  <h2 class="h5 fw-normal mb-0"><a class="card-collapse-link text-dark d-block" data-bs-toggle="collapse" href="#activities-box" aria-expanded="true">Recent Activities</a></h2>
+                </div>
+                <div class="card-body p-0">
+                  <div class="collapse show" id="activities-box" role="tabpanel">
+                    <div class="row g-0 border-bottom border-gray-200">
+                      <div class="col-sm-4 col-3 text-end">
+                        <ul class="list-inline mb-0">
+                          <li>
+                            <div class="d-inline-block p-2 bg-light"><i class="far fa-clock fa-fw"></i></div>
+                          </li>
+                          <li class="me-2"><span class="small text-gray-500">6:00 am</span></li>
+                          <li class="me-2"><span class="small text-info lh-1 d-block">6 hours ago</span></li>
+                        </ul>
+                      </div>
+                      <div class="col-sm-8 col-9 border-start border-gray-200 p-3">
+                        <h5 class="fw-normal">Meeting</h5>
+                        <p class="small mb-0 text-gray-600">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.         </p>
+                      </div>
+                    </div>
+                    <div class="row g-0 border-bottom border-gray-200">
+                      <div class="col-sm-4 col-3 text-end">
+                        <ul class="list-inline mb-0">
+                          <li>
+                            <div class="d-inline-block p-2 bg-light"><i class="far fa-clock fa-fw"></i></div>
+                          </li>
+                          <li class="me-2"><span class="small text-gray-500">6:00 am</span></li>
+                          <li class="me-2"><span class="small text-info lh-1 d-block">6 hours ago</span></li>
+                        </ul>
+                      </div>
+                      <div class="col-sm-8 col-9 border-start border-gray-200 p-3">
+                        <h5 class="fw-normal">Meeting</h5>
+                        <p class="small mb-0 text-gray-600">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.         </p>
+                      </div>
+                    </div>
+                    <div class="row g-0 border-bottom border-gray-200">
+                      <div class="col-sm-4 col-3 text-end">
+                        <ul class="list-inline mb-0">
+                          <li>
+                            <div class="d-inline-block p-2 bg-light"><i class="far fa-clock fa-fw"></i></div>
+                          </li>
+                          <li class="me-2"><span class="small text-gray-500">6:00 am</span></li>
+                          <li class="me-2"><span class="small text-info lh-1 d-block">6 hours ago</span></li>
+                        </ul>
+                      </div>
+                      <div class="col-sm-8 col-9 border-start border-gray-200 p-3">
+                        <h5 class="fw-normal">Meeting</h5>
+                        <p class="small mb-0 text-gray-600">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.         </p>
+                      </div>
+                    </div>
+                    <div class="row g-0 border-bottom border-gray-200">
+                      <div class="col-sm-4 col-3 text-end">
+                        <ul class="list-inline mb-0">
+                          <li>
+                            <div class="d-inline-block p-2 bg-light"><i class="far fa-clock fa-fw"></i></div>
+                          </li>
+                          <li class="me-2"><span class="small text-gray-500">6:00 am</span></li>
+                          <li class="me-2"><span class="small text-info lh-1 d-block">6 hours ago</span></li>
+                        </ul>
+                      </div>
+                      <div class="col-sm-8 col-9 border-start border-gray-200 p-3">
+                        <h5 class="fw-normal">Meeting</h5>
+                        <p class="small mb-0 text-gray-600">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.         </p>
+                      </div>
+                    </div>
+                    <div class="row g-0">
+                      <div class="col-sm-4 col-3 text-end">
+                        <ul class="list-inline mb-0">
+                          <li>
+                            <div class="d-inline-block p-2 bg-light"><i class="far fa-clock fa-fw"></i></div>
+                          </li>
+                          <li class="me-2"><span class="small text-gray-500">6:00 am</span></li>
+                          <li class="me-2"><span class="small text-info lh-1 d-block">6 hours ago</span></li>
+                        </ul>
+                      </div>
+                      <div class="col-sm-8 col-9 border-start border-gray-200 p-3">
+                        <h5 class="fw-normal">Meeting</h5>
+                        <p class="small mb-0 text-gray-600">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.         </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <footer class="main-footer w-100 position-absolute bottom-0 start-0 py-2" style="background: #222">
+        <div class="container-fluid">
+          <div class="row text-center gy-3">
+            <div class="col-sm-6 text-sm-start">
+              <p class="mb-0 text-sm text-gray-600">Your company &copy; 2017-2021</p>
+            </div>
+            <div class="col-sm-6 text-sm-end">
+              <p class="mb-0 text-sm text-gray-600">Design by <a href="https://bootstrapious.com/p/bootstrap-4-dashboard" class="external">Bootstrapious</a></p>
+              <!-- Please do not remove the backlink to us unless you support further theme's development at https://bootstrapious.com/donate. It is part of the license conditions and it helps me to run Bootstrapious. Thank you for understanding :)-->
+            </div>
+          </div>
+        </div>
+      </footer>
     </div>
-    <script src="js/jquery-3.1.0.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-	<script src="js/jstree.min.js"></script>
-    <script src="js/jstree.active.js"></script>
-    <script src="js/main.js"></script>
-</body>
-
-</html>
-
+    <!-- JavaScript files-->
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="vendor/chart.js/Chart.min.js"></script>
+    <script src="vendor/just-validate/js/just-validate.min.js"></script>
+    <script src="vendor/choices.js/public/assets/scripts/choices.min.js"></script>
+    <script src="vendor/overlayscrollbars/js/OverlayScrollbars.min.js"></script>
+    <script src="js/charts-home.js"></script>
+    <!-- Main File-->
+    <script src="js/front.js"></script>
+    <script>
+      // ------------------------------------------------------- //
+      //   Inject SVG Sprite - 
+      //   see more here 
+      //   https://css-tricks.com/ajaxing-svg-sprite/
+      // ------------------------------------------------------ //
+      function injectSvgSprite(path) {
+      
+          var ajax = new XMLHttpRequest();
+          ajax.open("GET", path, true);
+          ajax.send();
+          ajax.onload = function(e) {
+          var div = document.createElement("div");
+          div.className = 'd-none';
+          div.innerHTML = ajax.responseText;
+          document.body.insertBefore(div, document.body.childNodes[0]);
+          }
+      }
+      // this is set to BootstrapTemple website as you cannot 
+      // inject local SVG sprite (using only 'icons/orion-svg-sprite.svg' path)
+      // while using file:// protocol
+      // pls don't forget to change to your domain :)
+      injectSvgSprite('https://bootstraptemple.com/files/icons/orion-svg-sprite.svg'); 
+      
+      
+    </script>
+    <!-- FontAwesome CSS - loading as last, so it doesn't block rendering-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+  </body>
+</html> #}
 {% endblock %}

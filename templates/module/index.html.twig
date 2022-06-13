@@ -36,9 +36,9 @@
                         <tr class="table-primary">
                             <th scope="row">{{ module.id }}</th>
                             <th scope="row">{{ module.libelle }}</th>
-       <td><button class='btn btn-warning'>Modifier</button></td>
-        <td><button type="submit" class='btn btn-danger'>Supprimer</button></td>
-                        </tr>  
+           <td><a href="{{path('module_edit',{id:module.id}) }}"><button class='btn btn-warning'>Modifier</button></a></td>
+           <td><a href="{{ path('module_delete',{id:module.id}) }}"<button type="submit" class='btn btn-danger'>Supprimer</button></td>
+       </tr>  
                     {% endfor %}
             </tbody>    
     </table>

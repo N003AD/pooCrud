@@ -13,7 +13,7 @@
                     {{ message }}
                 </div>
             {% endfor %}
- 
+
             {# total items count #}
             <div class="count mt-4">
              <h4>
@@ -34,8 +34,8 @@
                         <tr class="table-primary">
                             <th scope="row">{{ professeur.nomComplet }}</th>
                             <th scope="row">{{ professeur.grade }}</th>
-        <td><button class='btn btn-warning'>Modifier</button></td>
-        <td><button type="submit" class='btn btn-danger'>Supprimer</button></td>
+             <td><a href="{{path('professeur_edit',{id:professeur.id}) }}"><button class='btn btn-warning'>Modifier</button></a></td>
+        <td><a href="{{ path('professeur_delete',{id:professeur.id}) }}"<button type="submit" class='btn btn-danger'>Supprimer</button></td>
                         </tr>  
                     {% endfor %}
             </tbody>    

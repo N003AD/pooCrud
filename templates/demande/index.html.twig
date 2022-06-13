@@ -3,41 +3,46 @@
 {% block title %}Hello ModuleController!{% endblock %}
 
 {% block body %}
-<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
+ <div class="container mt-4">
+         <h1>Les demandes</h1>
+            <a href="{{ path('app_addClasse') }}" class="btn btn-primary">
+                    Créer une clases
+            </a>
 
-<div class="example-wrapper">
-    <h1>Hello {{ controller_name }}! ✅</h1>
-
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code><a href="{{ '/home/cheikh/Bureau/Sonatel/pooCrud/src/Controller/ProfesseurController.php'|file_link(0) }}">src/Controller/ProfesseurController.php</a></code></li>
-        <li>Your template at <code><a href="{{ '/home/cheikh/Bureau/Sonatel/pooCrud/templates/professeur/index.html.twig'|file_link(0) }}">templates/professeur/index.html.twig</a></code></li>
-    </ul>
-</div>
- <table class="table table-hover text-center ">
-    <thead class="table-dark">
-        <tr>
-            <th scope="col1">Motif</th>
-            <th scope="col1">Etat</th>
-            <th>Action1</th>
-            <th>Action2</th>
-        </tr>
-    </thead>
-    <tbody>
-      {% for demande in demandes %}
-    <tr>
-        <td>{{demande.motif}} </td>
-        <td>{{demande.etat}} </td>
-        <td><button class='btn btn-warning'>Modifier</button></td>
-        <td><button type="submit" class='btn btn-danger'>Supprimer</button></td>
-    </tr>
-    {% endfor %}
+            {% for message in app.flashes('success') %}
+                <div class="alert-success mt-5">
+                    {{ message }}
+                </div>
+            {% endfor %}
+ 
+            {# total items count #}
+            <div class="count mt-4">
+             <h4>
+                Il y a   {{ demandes.getTotalItemCount }} demandes  au total dans l'école
+             </h4>
+            </div>
+    <table class="table table-hover text-center">
+         <thead class="table-dark">
+            <tr>
+            <th scope="col">Motif</th>
+            <th scope="col">Etat</th>
+            <th scope="col">Modifier</th>
+            <th scope="col">Supprimmer</th>
+            </tr>
+        </thead>
+            <tbody>
+                    {% for demande in demandes %}
+                        <tr class="table-primary">
+                         <th scope="row">{{ demande.motif }}</th>
+                            <th scope="row">{{ demande.etat }}</th>
+ <td><a href="{{path('classe_edit',{id:demande.id}) }}"><button class='btn btn-warning'>Modifier</button></a></td>
+        <td><a href="{{ path('classe_delete',{id:demande.id}) }}"<button type="submit" class='btn btn-danger'>Supprimer</button></td>
+                        </tr>  
+                    {% endfor %} 
+            </tbody>    
     </table>
-      <div class="d-flex justify-content-center">
-    {% do demandes.setPageRange(10) %}
-    {{knp_pagination_render(demandes,'base/pagination.html.twig')}}
+  # pagination #
+    <div class="navigation d-flex justify-content-center mt-4">
+        {{ knp_pagination_render(demandes) }}
+    </div>
 {% endblock %}
-

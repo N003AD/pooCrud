@@ -12,12 +12,52 @@
       {# <link rel="stylesheet" href="{{ asset('darkpan-1.0.0/lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css') }}"> #}
    
         {# Run `composer require symfony/webpack-encore-bundle` to start using Symfony UX #}
+            <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700">
+    <!-- Choices CSS-->
+    <link rel="stylesheet" href="vendor/choices.js/public/assets/styles/choices.min.css">
+    <!-- Custom Scrollbar-->
+    <link rel="stylesheet" href="vendor/overlayscrollbars/css/OverlayScrollbars.min.css">
+    <!-- theme stylesheet-->
+    <link rel="stylesheet" href="css/style.default.css" id="theme-stylesheet">
+    <!-- Custom stylesheet - for your changes-->
+    <link rel="stylesheet" href="css/custom.css">
+    <!-- Favicon-->
+    <link rel="shortcut icon" href="img/favicon.ico">
+
         {% block stylesheets %}
             {{ encore_entry_link_tags('app') }}
-            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css'">
-        <link rel="stylesheet" href="{{asset('octopus/documentation/css/bootstrap.min.css') }}" />
-        <link rel="stylesheet" href="{{ asset('octopus/documentation/css/tree-viewer.css') }}" />
-            <link rel="stylesheet" href="{{ asset('octopus/documentation/css/style.css')}}" />
+            <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700'">
+
+ <link rel="stylesheet" href="{{asset('boostrap-dashboard/distribution/vendor/choices.js/public/assets/styles/choices.min.css') }}" />
+        <link rel="stylesheet" href="{{asset('boostrap-dashboard/distribution/vendor/overlayscrollbars/css/OverlayScrollbars.min.css') }}" />
+        
+
+
+    
+        <link rel="stylesheet" href="{{asset('boostrap-dashboard/distribution/css/custom.css') }}" />
+        <link rel="stylesheet" href="{{asset('boostrap-dashboard/distribution/css/style.blue.css') }}" />
+        <link rel="stylesheet" href="{{asset('boostrap-dashboard/distribution/css/style.blue.min.css') }}" />
+        <link rel="stylesheet" href="{{asset('boostrap-dashboard/distribution/css/style.blue.min.css.map') }}" />
+
+           <link rel="stylesheet" href="{{asset('boostrap-dashboard/distribution/css/style.default.css') }}" />
+   <link rel="stylesheet" href="{{asset('boostrap-dashboard/distribution/css/stylestyle.default.min.css') }}" />
+   <link rel="stylesheet" href="{{asset('boostrap-dashboard/distribution/css/style.style.default.min.css.map') }}" />
+   <link rel="stylesheet" href="{{asset('boostrap-dashboard/distribution/css/style.green.css') }}" />
+   <link rel="stylesheet" href="{{asset('boostrap-dashboard/distribution/css/style.green.min.css.map') }}" />
+   <link rel="stylesheet" href="{{asset('boostrap-dashboard/distribution/css/style.pink.min.css') }}" />
+   <link rel="stylesheet" href="{{asset('boostrap-dashboard/distribution/css/style.pink.min.css.map') }}" />
+
+    <link rel="stylesheet" href="{{asset('boostrap-dashboard/distribution/css/style.red.css') }}" />
+     <link rel="stylesheet" href="{{asset('boostrap-dashboard/distribution/css/style.red.min.css.map') }}" />
+      <link rel="stylesheet" href="{{asset('boostrap-dashboard/distribution/css/style.sea.min.css') }}" />
+       <link rel="stylesheet" href="{{asset('boostrap-dashboard/distribution/css/style.sea.min.css.map') }}" />
+
+       <link rel="stylesheet" href="{{asset('boostrap-dashboard/distribution/css/style.violet.css') }}" />
+       <link rel="stylesheet" href="{{asset('boostrap-dashboard/distribution/css/style.violet.min.css') }}" />
+       <link rel="stylesheet" href="{{asset('boostrap-dashboard/distribution/css/style.violet.min.css.map') }}" />
+
+       
+   
 
     
         {% endblock %}
@@ -35,13 +75,9 @@
   {# Fichier JS
         {# <script src="{{asset('assets/js/bootstrap.bundle.min.js ')}}"></script> #}
 
-    <script src="{{ asset('octopus/documentation/js/bootstrap.min.js') }}"></script>
-     <script src="{{ asset('octopus/documentation/js/jquery-3.1.0.min.js') }}"></script>
-     <script src="{{ asset('octopus/documentation/js/jstree.min.js') }}"></script>
-        <script src="{{ asset('octopus/documentation/js/jstree.active.js') }}"></script>
-           <script src="{{ asset('octopus/documentation/js/main.js') }}"></script>
-
-         <script src="{{asset('assets/js/bootstrap.bundle.min.js ')}}"></script>
+    <script src="{{ asset('boostrap-dashboard/distribution/js/charts-custom.js') }}"></script>
+     <script src="{{ asset('octopus/documentation/js/charts-home.js') }}"></script>
+     <script src="{{ asset('octopus/documentation/js/front.js') }}"></script>
     </body>
 </html>
 

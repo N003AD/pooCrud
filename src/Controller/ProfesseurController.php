@@ -36,8 +36,11 @@ class ProfesseurController extends AbstractController
     }
 
     #[Route('/ajoutProfesseur', name: 'ajout_prof', methods:['GET', 'POST'])]
-    public function addClasse(Request $request, ProfesseurRepository $repo): Response{
-        $professeur= new Professeur();
+    #[Route('/edit/{id}', name:'professeur_edit' , methods:['GET','POST'])]
+    public function addClasse(Request $request, Professeur $professeur = null, ProfesseurRepository $repo): Response{
+        if(!$professeur){
+            $professeur= new Professeur();
+        }
         $professeurform= $this->createForm(ProfesseurType::class);
         $professeurform->handleRequest($request);
 
@@ -53,6 +56,15 @@ class ProfesseurController extends AbstractController
             'classeform' => $professeurform ->createView(),
             "controller_name" => "Ajouter une nouvelle Professeur"
         ]);
+    }
+
+    #[Route('/delete/{id}', name:'professeur_delete' , methods:['GET','POST'])]
+
+    public function delete(Professeur $professeur = null, ProfesseurRepository $repo){
+        if($professeur){
+            $repo->remove($professeur, true);
+        }
+        return $this->redirectToRoute('ajout_prof');
     }
 }
 

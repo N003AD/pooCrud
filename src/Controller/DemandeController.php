@@ -3,7 +3,9 @@
 namespace App\Controller;
 
 use App\Entity\Demande;
+use App\Form\ClasseType;
 use App\Repository\DemandeRepository;
+use Doctrine\ORM\EntityManagerInterface;
 use Knp\Component\Pager\PaginatorInterface;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -32,4 +34,37 @@ class DemandeController extends AbstractController
             'demandes'=>$demandes,
         ]);
     }
+
+    #[Route('/demande/new', name: 'app_addDemande', methods:['GET', 'POST'])]
+    #[Route('/edit/{id}', name:'demande_edit' , methods:['GET','POST'])]
+    public function addClasse(Request $request, Demande $classe=null, EntityManagerInterface $manager): Response{
+        if(!$classe){
+            $classe= new Demande();
+        }
+        $classeform = $this->createForm(ClasseType::class,$classe);
+        $classeform->handleRequest($request);
+
+        if($classeform->isSubmitted() && $classeform->isValid()){
+            $manager->persist($classe);
+            $manager->flush();
+            $this->addFlash('success', 'Vous a avez crée une classe avec succés');
+            return $this->redirectToRoute('app_demande');
+        }
+
+        return $this->render('classe/add.html.twig', [
+            'classeform' => $classeform->createView(),
+            "controller_name" => "Ajouter une nouvelle classe"
+        ]);
+        
+    }
+    #[Route('/delete/{id}', name:'classe_delete' , methods:['GET','POST'])]
+
+    public function delete(Demande $demande = null, DemandeRepository $repo){
+        if($demande){
+            $repo->remove($demande, true);
+        }
+        return $this->redirectToRoute('app_demande');
+    }
+
 }
+

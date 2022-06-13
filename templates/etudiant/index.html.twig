@@ -3,29 +3,29 @@
 {% block title %}Hello EtudiantController!{% endblock %}
 
 {% block body %}
-
-<table class="table table-hover text-center ">
-    <thead class="table-dark">
+  {# {{ dump(etudiants)}} #}
+    <table class="table table-hover text-center">
+         <thead class="table-dark">
         <tr>
+            <th scope="col1">nomComplet</th>
             <th scope="col1">Matricule</th>
             <th scope="col1">Sexe</th>
             <th scope="col1" >Addresse</th>
-            <th>Action1</th>
-            <th>Action2</th>
+            <th scope="col1" >Email</th>
         </tr>
     </thead>
     <tbody>
       {% for etudiant in etudiants %}
     <tr>
+        <td>{{etudiant.nomComplet}} </td>
         <td>{{etudiant.matricule}} </td>
         <td>{{etudiant.sexe}} </td>
-        <td>{{etudiant.addrese}} </td>
-        <td><button class='btn btn-warning'>Modifier</button></td>
-        <td><button type="submit" class='btn btn-danger'>Supprimer</button></td>
+        <td>{{etudiant.adresse}} </td>
+        <td>{{etudiant.email}} </td>
     </tr>
 {% endfor %}
 </table>
-    <class="d-flex justify-content-center">
-    {% do classes.setPageRange(10) %}
-    {{knp_pagination_render(etudiants,'base/pagination.html.twig')}}
+    {# <class="d-flex justify-content-center">
+    {% do etudiants.setPageRange(10) %}
+    {{knp_pagination_render(etudiants,'base/pagination.html.twig')}} #}
 {% endblock %}

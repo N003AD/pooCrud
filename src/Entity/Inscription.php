@@ -18,8 +18,7 @@ class Inscription
     #[ORM\ManyToOne(targetEntity: AnneeScolaire::class, inversedBy: 'inscriptions')]
     private $anneeScolaire;
 
-    #[ORM\ManyToOne(targetEntity: AC::class, inversedBy: 'inscriptions')]
-    private $aC;
+ 
 
     #[ORM\OneToMany(mappedBy: 'inscription', targetEntity: Demande::class)]
     private $demandes;
@@ -49,17 +48,7 @@ class Inscription
         return $this;
     }
 
-    public function getAC(): ?AC
-    {
-        return $this->aC;
-    }
 
-    public function setAC(?AC $aC): self
-    {
-        $this->aC = $aC;
-
-        return $this;
-    }
 
     /**
      * @return Collection<int, Demande>
