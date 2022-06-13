@@ -1,19 +1,36 @@
-{% extends 'base.html.twig' %}
+    {% extends 'base.html.twig' %}
 
-{% block title %}Hello EtudiantController!{% endblock %}
+{% block title %}Liste de classes{% endblock %}
 
 {% block body %}
-  {# {{ dump(etudiants)}} #}
+         <div class="container mt-4">
+         <h1>Les classes</h1>
+            <a href="{{ path('app_addClasse') }}" class="btn btn-primary">
+                    Ajouter un étudiant
+            </a>
+
+            {% for message in app.flashes('success') %}
+                <div class="alert-success mt-5">
+                    {{ message }}
+                </div>
+            {% endfor %}
+ 
+            {# total items count #}
+            <div class="count mt-4">
+             {# <h4>
+                Il y a   {{ etudiants.getTotalItemCount }} classes  au total dans l'école
+             </h4> #}
+            </div>
     <table class="table table-hover text-center">
          <thead class="table-dark">
-        <tr>
+            <tr>
             <th scope="col1">nomComplet</th>
             <th scope="col1">Matricule</th>
             <th scope="col1">Sexe</th>
             <th scope="col1" >Addresse</th>
             <th scope="col1" >Email</th>
-        </tr>
-    </thead>
+            </tr>
+        </thead>
     <tbody>
       {% for etudiant in etudiants %}
     <tr>
@@ -28,4 +45,10 @@
     {# <class="d-flex justify-content-center">
     {% do etudiants.setPageRange(10) %}
     {{knp_pagination_render(etudiants,'base/pagination.html.twig')}} #}
+      {# # pagination #
+    <div class="navigation d-flex justify-content-center mt-4">
+        {{ knp_pagination_render(etudiants) }}
+    </div> #}
 {% endblock %}
+
+

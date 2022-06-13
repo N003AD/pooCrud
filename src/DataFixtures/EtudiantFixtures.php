@@ -24,8 +24,9 @@ class EtudiantFixtures extends Fixture
             $etudiant= new Etudiant;
             $rand=rand(0,2);
             $etudiant ->setNomComplet($nomComplet[$rand])
+            ->setNomComplet($nomComplet[$rand])
                       ->setEmail("admin".$i."@gmail.com")
-                      ->setPassword("passer")
+                      ->setPassword($this->hacher->hashPassword($etudiant,"passer"))
                      ->setRoles(["ROLE_ETUDIANT"])
                      ->setMatricule($matricules[$rand])
                     ->setSexe($sexes[$rand])
