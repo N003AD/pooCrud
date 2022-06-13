@@ -36,21 +36,21 @@ class ProfesseurType extends AbstractType
                 'class' => 'form-control mt-4' 
             ]
         ])
-        ->add('module',EntityType::class, [
+        ->add('modules',EntityType::class, [
             'class'=>Module::class,
             'choice_label'=>'libelle',
             'multiple' => true,
-            'expanded' => true,
+            'expanded' => false,
             "label" => "Séléctionner les modules du prof",
             'attr' => [
                 'class' => 'form-control mt-4'
             ]
             //  'choices' => Professeur::$module,
         ])
-        ->add('classe',EntityType::class, [
+        ->add('classes',EntityType::class, [
             'class'=>Classe::class,
             'choice_label'=>'libelle',
-            'multiple' => false,
+            'multiple' => true,
             'expanded' => false,
             "label" => "Séléctionner les modules du prof",
             'attr' => [

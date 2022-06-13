@@ -38,9 +38,9 @@ class ProfesseurController extends AbstractController
     #[Route('/ajoutProfesseur', name: 'ajout_prof', methods:['GET', 'POST'])]
     #[Route('/edit/{id}', name:'professeur_edit' , methods:['GET','POST'])]
     public function addClasse(Request $request, Professeur $professeur = null, ProfesseurRepository $repo): Response{
-        if(!$professeur){
+        
             $professeur= new Professeur();
-        }
+        
         $professeurform= $this->createForm(ProfesseurType::class);
         $professeurform->handleRequest($request);
 

@@ -24,25 +24,25 @@ class EtudiantFixtures extends Fixture
         // $product = new Product();
         // $manager->persist($product);
         $nomComplet=['cheikh Tidiane','Mamadou','Fatyraza'];
-        $matricules=['NOO','N00','NOO'];
+        // $matricules=['NOO','N00','NOO'];
         $sexes=['M','F','M'];
         $email=['diop@gmial.com','Fall@gmial.com','Mbaye@gmial.com'];
         // $password=['diop','Fall','Mbaye'];
         $addresses=['Thies','Fass','Dakar'];
         for ($i=0; $i <10 ; $i++) { 
             # code...
-            $etudiant= new Etudiant;
+            $user= new Etudiant;
             $rand=rand(0,2);
-            $etudiant ->setNomComplet($nomComplet[$rand])
+            $user ->setNomComplet($nomComplet[$rand])
                       ->setEmail("admin".$i."@gmail.com")
-                      ->setPassword($this-> hasher->hashPassword($etudiant,"passer"))
-                     ->setRoles(["ROLE_ETUDIANT"])
-                     ->setMatricule($matricules[$rand])
+                      ->setPassword($this-> hasher->hashPassword($user,"passer"))
+                     ->setRoles(["ROLE_ETUDIANT"]);
+                     $user->setMatricule("bbb".$i)
                     //  ->setMatricule('dxfcgvhb'+$i)
                     ->setSexe($sexes[$rand])
                    ->setAdresse($addresses[$rand]);
-            $manager->persist($etudiant);
-            $this->addReference('etudiant'.$i,$etudiant);
+            $manager->persist($user);
+            $this->addReference('etudiant'.$i,$user);
     }
     $manager->flush();
 
