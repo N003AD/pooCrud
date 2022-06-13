@@ -25,6 +25,8 @@
             <tr>
             <th scope="col">Nom Complet</th>
             <th scope="col">Grade</th>
+            {# <th scope="col">Classe</th>
+            <th scope="col">Module</th> #}
             <th scope="col">Action1</th>
             <th scope="col">Action2</th>
             </tr>
@@ -34,6 +36,8 @@
                         <tr class="table-primary">
                             <th scope="row">{{ professeur.nomComplet }}</th>
                             <th scope="row">{{ professeur.grade }}</th>
+                            {# <th scope="row">{{ professeur.classe }}</th>
+                             <th scope="row">{{ professeur.module }}</th> #}
              <td><a href="{{path('professeur_edit',{id:professeur.id}) }}"><button class='btn btn-warning'>Modifier</button></a></td>
         <td><a href="{{ path('professeur_delete',{id:professeur.id}) }}"<button type="submit" class='btn btn-danger'>Supprimer</button></td>
                         </tr>  

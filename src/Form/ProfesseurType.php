@@ -2,8 +2,13 @@
 
 namespace App\Form;
 
+use App\Entity\Classe;
+use App\Entity\Etudiant;
+use App\Entity\Module;
 use App\Entity\Professeur;
+use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\Form\AbstractType;
+use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\FormBuilderInterface;
@@ -31,10 +36,32 @@ class ProfesseurType extends AbstractType
                 'class' => 'form-control mt-4' 
             ]
         ])
+        ->add('module',EntityType::class, [
+            'class'=>Module::class,
+            'choice_label'=>'libelle',
+            'multiple' => true,
+            'expanded' => true,
+            "label" => "Séléctionner les modules du prof",
+            'attr' => [
+                'class' => 'form-control mt-4'
+            ]
+            //  'choices' => Professeur::$module,
+        ])
+        ->add('classe',EntityType::class, [
+            'class'=>Classe::class,
+            'choice_label'=>'libelle',
+            'multiple' => false,
+            'expanded' => false,
+            "label" => "Séléctionner les modules du prof",
+            'attr' => [
+                'class' => 'form-control mt-4'
+            ],
+        ])
+      
         // J'aimerais ajouter une champ une case à cocher
          
         ->add("Soumettre",SubmitType::class, [
-            'attr' => [ 
+            'attr' => [
                 'class' => 'btn btn-primary mt-4'
             ]
         ])

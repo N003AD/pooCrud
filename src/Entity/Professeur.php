@@ -20,6 +20,8 @@ class Professeur extends Personne
     #[ORM\ManyToMany(targetEntity: Module::class, mappedBy: 'professeurs',cascade:['persist'])]
     private $modules;
 
+    // public static $classe=['MPI'=>'Informatique', 'Géomatique'=>'Genie Civil'];
+    // public static $module=['php'=>'SVT', 'Js'=>'php'];
     public function __construct()
     {
         $this->classes = new ArrayCollection();

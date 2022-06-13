@@ -13,7 +13,7 @@ class ClasseFixtures extends Fixture
         // $product = new Product();
         // $manager->persist($product);
         $filieres=['Dev Web','Dev Mobile','Dev Web Mobile'];
-        $niveaux=['L1','L2','L3'];
+        $niveaux=['L1','L2','Master2'];
         for ($i=0; $i <10 ; $i++) { 
             # code...
             $classe= new Classe;

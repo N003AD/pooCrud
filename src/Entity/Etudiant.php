@@ -20,6 +20,8 @@ class Etudiant  extends User
     #[ORM\Column(type: 'string', length: 255)]
     private $adresse;
 
+
+    
     public function __construct()
     {
         //$this->inscriptions = new ArrayCollection();
