@@ -4,6 +4,7 @@ namespace App\Controller;
 
 use App\Entity\Demande;
 
+use App\Form\DemandeType;
 use App\Repository\DemandeRepository;
 use Doctrine\ORM\EntityManagerInterface;
 use Knp\Component\Pager\PaginatorInterface;
@@ -34,9 +35,7 @@ class DemandeController extends AbstractController
             'demandes'=>$demandes,
         ]);
     }
-
-    #[Route('/ajoutDemande', name: 'ajout_demande', methods:['GET', 'POST'])]
-    #[Route('/edit/{id}', name:'demande_edit' , methods:['GET','POST'])]
+    #[Route('/addDemande', name: 'app_addDemande', methods:['GET', 'POST'])]
     public function addDemande(Request $request, Demande $demande=null, EntityManagerInterface $manager): Response{
         if(!$demande){
             $demande= new Demande();
@@ -44,15 +43,15 @@ class DemandeController extends AbstractController
         $demandeform = $this->createForm(DemandeType::class,$demande);
         $demandeform ->handleRequest($request);
 
-        if($demandeform ->isSubmitted() && $demandeform ->isValid()){
+        if($demandeform ->isSubmitted() && $demandeform->isValid()){
             $manager->persist($demande);
             $manager->flush();
             $this->addFlash('success', 'Vous a avez crée une classe avec succés');
             return $this->redirectToRoute('app_demande');
         }
 
-        return $this->render('classe/add.html.twig', [
-            'classeform' => $demandeform ->createView(),
+        return $this->render('demande/ajoutDemande.html.twig', [
+            'demandeform' => $demandeform ->createView(),
             "controller_name" => "Ajouter une nouvelle classe"
         ]);
         

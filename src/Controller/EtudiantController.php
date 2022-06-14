@@ -33,29 +33,30 @@ class EtudiantController extends AbstractController
         ]);
     }
 
-    #[Route('/ajoutProfesseur', name: 'ajout_prof', methods:['GET', 'POST'])]
+    #[Route('/addEtudiant', name: 'app_addEtudiant', methods:['GET', 'POST'])]
+    // #[Route('/edit/{id}', name:'etudiant_edit' , methods:['GET','POST'])]
     public function addEtudiant(Request $request, Etudiant $etudiant = null, EtudiantRepository $repo): Response{
         if(!$etudiant){
             $etudiant= new Etudiant();
         }
-        $etudiantform= $this->createForm(EtudiantType::class);
+        $etudiantform = $this->createForm(EtudiantType::class, $etudiant);
         $etudiantform->handleRequest($request);
 
         if($etudiantform->isSubmitted() &&  $etudiantform->isValid()){
 
             $repo->add($etudiantform->getData(),true);
             // dd($professeur);
-            $this->addFlash('success', 'Vous a avez crée un professeur avec succés');
+            $this->addFlash('success', 'Vous a avez ajouter un étudiant avec succés');
             return $this->redirectToRoute('app_etudiant');
         }
 
         return $this->render('classe/add.html.twig', [
             'classeform' => $etudiantform ->createView(),
-            "controller_name" => "Ajouter une nouvelle Professeur"
+            "controller_name" => "Ajouter une nouvelle étudiant"
         ]);
     }
 
-    #[Route('/delete/{id}', name:'professeur_delete' , methods:['GET','POST'])]
+    // #[Route('/delete/{id}', name:'professeur_delete' , methods:['GET','POST'])]
 
     public function delete(Etudiant $etudiant = null, EtudiantRepository $repo){
         if($etudiant){

@@ -5,8 +5,8 @@
 {% block body %}
  <div class="container mt-4">
          <h1>Les demandes</h1>
-            <a href="{{ path('app_addClasse') }}" class="btn btn-primary">
-                    Créer une clases
+            <a href="{{ path('app_addDemande') }}" class="btn btn-primary">
+                    Créer une demande
             </a>
 
             {% for message in app.flashes('success') %}

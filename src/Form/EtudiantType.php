@@ -4,6 +4,9 @@ namespace App\Form;
 
 use App\Entity\Etudiant;
 use Symfony\Component\Form\AbstractType;
+use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
+use Symfony\Component\Form\Extension\Core\Type\SubmitType;
+use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
@@ -13,55 +16,58 @@ class EtudiantType extends AbstractType
     {
         $builder
         ->add('nomComplet',TextType::class, [
-            "label" => "Entrer une classe",
+            "label" => "Entrer le nom",
             'attr' => [
-                'placeholder' =>  'libelle',
+                'placeholder' =>  'nom complet',
              'class' => 'form-control' ,
             ]
         ])
         ->add('email',TextType::class, [
-            "label" => "Entrer une classe",
+            "label" => "Entrer l'email",
             'attr' => [
                 'placeholder' =>  'libelle',
              'class' => 'form-control' ,
             ]
         ])
 
-        ->add('roles',TextType::class, [
-            "label" => "Entrer une classe",
-            'attr' => [
-                'placeholder' =>  'libelle',
-             'class' => 'form-control' ,
-            ]
-        ])
-        ->add('password',TextType::class, [
-            "label" => "Entrer une classe",
-            'attr' => [
-                'placeholder' =>  'libelle',
-             'class' => 'form-control' ,
-            ]
-        ])
-        ->add('matricule',TextType::class, [
-            "label" => "Entrer une classe",
-            'attr' => [
-                'placeholder' =>  'libelle',
-             'class' => 'form-control' ,
-            ]
-        ])
-        ->add('sexe',TextType::class, [
-            "label" => "Entrer une classe",
-            'attr' => [
-                'placeholder' =>  'libelle',
-             'class' => 'form-control' ,
-            ]
+        // ->add('roles',TextType::class, [
+        //     "label" => "Entrer le role",
+        //     'attr' => [
+        //         'placeholder' =>  'libelle',
+        //      'class' => 'form-control' ,
+        //     ]
+        // ])
+        // ->add('password',TextType::class, [
+        //     "label" => "Entrer une classe",
+        //     'attr' => [
+        //         'placeholder' =>  'libelle',
+        //      'class' => 'form-control' ,
+        //     ]
+        // ])
+        // ->add('matricule',TextType::class, [
+        //     "label" => "Entrer le matricule",
+        //     'attr' => [
+        //         'placeholder' =>  'matricule',
+        //      'class' => 'form-control' ,
+        //     ]
+        // ])
+        ->add('sexe',ChoiceType::class, [
+            "label" => "séléctionner le sexe",
+            'choices' => [
+                'M' => 'M',
+                'F' => 'F',
+            ],
+            'expanded' => true,
+        
         ])
         ->add('adresse',TextType::class, [
-            "label" => "Entrer une classe",
+            "label" => "Entrer une addresse",
             'attr' => [
-                'placeholder' =>  'libelle',
+                'placeholder' =>  'addresse',
              'class' => 'form-control' ,
             ]
         ])
+       
         ;
     }
 

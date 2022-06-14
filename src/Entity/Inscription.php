@@ -23,8 +23,11 @@ class Inscription
     #[ORM\OneToMany(mappedBy: 'inscription', targetEntity: Demande::class)]
     private $demandes;
 
-    #[ORM\ManyToOne(targetEntity: Etudiant::class, inversedBy: 'insccriptions')]
+    #[ORM\ManyToOne(targetEntity: Etudiant::class, inversedBy: 'insccriptions', cascade:["persist"])]
     private $etudiant;
+
+    #[ORM\ManyToOne(targetEntity: Classe::class, inversedBy: 'inscriptions')]
+    private $classe;
 
     public function __construct()
     {
@@ -88,6 +91,18 @@ class Inscription
     public function setEtudiant(?Etudiant $etudiant): self
     {
         $this->etudiant = $etudiant;
+
+        return $this;
+    }
+
+    public function getClasse(): ?Classe
+    {
+        return $this->classe;
+    }
+
+    public function setClasse(?Classe $classe): self
+    {
+        $this->classe = $classe;
 
         return $this;
     }

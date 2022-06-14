@@ -38,9 +38,9 @@
                             <th scope="row">{{ module.libelle }}</th>
            <td><a href="{{path('module_edit',{id:module.id}) }}"><button class='btn btn-warning'>Modifier</button></a></td>
            <td><a href="{{ path('module_delete',{id:module.id}) }}"<button type="submit" class='btn btn-danger'>Supprimer</button></td>
-       </tr>  
+       </tr>
                     {% endfor %}
-            </tbody>    
+            </tbody>
     </table>
     # display navigation #
     <div class="navigation d-flex justify-content-center mt-4">
@@ -50,6 +50,6 @@
             <div>
                 <p>{{ ingredient.name }} </p>
             </div>
-              { {% endfor %} }    
+              { {% endfor %} }
          </div> #}
 {% endblock %}
